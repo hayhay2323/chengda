@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>OEM / ODM · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=7" />
+<style>
+  .lede {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: clamp(28px, 3.6vw, 48px);
+    line-height: 1.18; letter-spacing: -0.02em; max-width: 22ch;
+  }
+  .lede em { color: var(--accent); font-style: italic; }
+  .process-list { border-top: 1px solid var(--ink); margin-top: 56px; }
+  .process-row {
+    display: grid; grid-template-columns: 80px 220px 1fr 100px;
+    gap: 32px; padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: start;
+  }
+  .process-row .num {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 48px; letter-spacing: -0.02em; line-height: 1;
+  }
+  .process-row h3 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 26px; letter-spacing: -0.01em;
+  }
+  .process-row .cn {
+    display:block; font-family: 'Noto Serif TC', serif;
+    font-size: 12px; color: var(--muted); letter-spacing: 0.35em; margin-top: 6px;
+  }
+  .process-row p {
+    font-size: 15px; line-height: 1.65; color: var(--ink-soft); margin: 0;
+  }
+  .process-row .lead {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.14em; color: var(--muted);
+    text-align: right;
+  }
+  @media (max-width: 880px) {
+    .process-row { grid-template-columns: 60px 1fr; gap: 16px; }
+    .process-row > div:nth-child(3), .process-row .lead { grid-column: 1 / -1; }
+    .process-row .lead { text-align: left; }
+  }
+  .opt-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
+  }
+  .opt {
+    border: 1px solid var(--line); padding: 24px;
+    background: var(--bg); display: flex; flex-direction: column; gap: 14px;
+    min-height: 200px;
+  }
+  .opt .ic {
+    width: 36px; height: 36px;
+    border: 1px solid var(--line-strong);
+    display: grid; place-items: center;
+  }
+  .opt h4 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 20px; letter-spacing: -0.01em;
+  }
+  .opt p { font-size: 13px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  @media (max-width: 980px) { .opt-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .opt-grid { grid-template-columns: 1fr; } }
+
+  .moq-table {
+    border-top: 1px solid var(--ink);
+    margin-top: 32px;
+  }
+  .moq-row {
+    display: grid; grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    gap: 24px; padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 14px;
+  }
+  .moq-row.head {
+    font-size: 11px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .moq-row .v {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 18px;
+  }
+  @media (max-width: 700px) { .moq-row { grid-template-columns: 1fr 1fr; gap: 8px 16px; } .moq-row.head { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <nav class="nav-menu">
+      <a href="index.html#home" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About us</a>
+      <a href="products.html" data-i18n="nav_product">Product</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <span class="lang-switch"><span class="on">EN</span> / 中文</span>
+  </div>
+</header>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About us</a>
+  <a href="products.html" data-i18n="nav_product">Product</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+  <div class="lang"><span class="lang-switch"><span class="on">EN</span> / 中文</span></div>
+</div>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span>
+      <a href="about.html" data-i18n="nav_about">About us</a><span class="sep">/</span>
+      <span>OEM / ODM</span>
+    </div>
+    <h1>OEM / ODM</h1>
+    <div class="sub">
+      <span>Custom Shapes</span><span>Glazing</span><span>Packaging</span><span>End-to-End</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="lede"><span data-i18n="oem_lede2">Custom-engineered <em>ceramic platforms</em> — from your sketch to a 40HQ container, all under one roof.</span></p>
+
+    <div class="opt-grid" style="margin-top:56px">
+      <div class="opt"><div class="ic">A</div><h4>Custom Shapes</h4><p>Round, oval, rectangular, vessel, console — slip-cast or pressure-cast tooling on request.</p></div>
+      <div class="opt"><div class="ic">B</div><h4>Dimensions</h4><p>Bespoke widths, depths and heights to match your bathroom platform or hospitality spec.</p></div>
+      <div class="opt"><div class="ic">C</div><h4>Glazing &amp; Color</h4><p>White, matte, gloss, colored, hand-painted — kiln-fired in our Chaozhou facility.</p></div>
+      <div class="opt"><div class="ic">D</div><h4>Packaging</h4><p>Custom cartons, foam inserts, branded labels, barcodes and pallet plans.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2><em>Four-stage</em> process<br/>from concept to container.</h2>
+      <p>End-to-end execution. Typical project lead time is 45 to 60 days.</p>
+    </div>
+
+    <div class="process-list">
+      <div class="process-row">
+        <div class="num">01</div>
+        <div><h3>Design &amp; Concept<span class="cn">設計&amp;概念</span></h3></div>
+        <p>Send us references, sketches or a brief. We translate them into 3D models and producible CAD drawings, with material recommendations and dimension verification.</p>
+        <div class="lead">5 — 10 DAYS</div>
+      </div>
+      <div class="process-row">
+        <div class="num">02</div>
+        <div><h3>Sample &amp; Approval<span class="cn">打樣&amp;確認</span></h3></div>
+        <p>Physical samples produced and shipped for your review. Tolerances, glaze color, surface finish and weight verified against the spec sheet before tooling.</p>
+        <div class="lead">15 — 25 DAYS</div>
+      </div>
+      <div class="process-row">
+        <div class="num">03</div>
+        <div><h3>Production &amp; QC<span class="cn">量產&amp;品控</span></h3></div>
+        <p>Slip-cast, dried, glazed, fired and inspected. Strict QC at every stage with batch traceability. Optional third-party inspection.</p>
+        <div class="lead">25 — 35 DAYS</div>
+      </div>
+      <div class="process-row">
+        <div class="num">04</div>
+        <div><h3>Packaging &amp; Shipping<span class="cn">包裝&amp;出貨</span></h3></div>
+        <p>Custom packaging applied, palletised and loaded. We handle FOB, CIF or DDP shipping with established freight partners.</p>
+        <div class="lead">10 — 30 DAYS</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>MOQ &amp; <em>lead times.</em></h2>
+      <p>Typical figures — exact MOQ depends on customisation level.</p>
+    </div>
+
+    <div class="moq-table">
+      <div class="moq-row head"><div>Order Type</div><div>MOQ</div><div>Production</div><div>Sample</div></div>
+      <div class="moq-row"><div class="v">Stock Models</div><div class="v">100 pcs</div><div class="v">25 — 35 d</div><div class="v">7 d</div></div>
+      <div class="moq-row"><div class="v">Custom Glaze / Color</div><div class="v">300 pcs</div><div class="v">35 — 45 d</div><div class="v">15 d</div></div>
+      <div class="moq-row"><div class="v">Custom Shape (ODM)</div><div class="v">500 pcs</div><div class="v">45 — 60 d</div><div class="v">20 — 25 d</div></div>
+      <div class="moq-row"><div class="v">Full Branded Line</div><div class="v">Negotiable</div><div class="v">60 — 90 d</div><div class="v">25 — 30 d</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" style="background:var(--ink);color:#fff">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.5)">START A PROJECT</div>
+    <h2 class="font-display" style="font-size:clamp(36px,5vw,72px);margin:20px 0 28px">Send us your <em style="color:var(--accent);font-style:italic">brief.</em></h2>
+    <a href="contact.html" class="btn" style="background:#fff;color:var(--ink);border-color:#fff" data-i18n="partner_btn">Start a Conversation →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chengda <span style="font-size:14px;color:rgba(255,255,255,0.45);letter-spacing:0.4em;font-family:'Noto Serif TC',serif">程達</span></div>
+        <p class="footer-tag" data-i18n="foot_tag_short">Engineering precision for every space.</p>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
+        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
+        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
+        <a href="about.html" data-i18n="nav_about">About us</a>
+        <a href="oem.html">OEM / ODM</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
+        <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot_copy">© 2026 Guangdong Chengda Intelligent Technology Co., Ltd.</span>
+      <span class="lang-switch">EN / 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
+</script>
+<script src="assets/i18n.js?v=6"></script>
+
+<script>
+(function(){
+  const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
+  if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

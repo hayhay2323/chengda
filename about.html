@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>About · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=7" />
+<style>
+  .lede {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: clamp(28px, 3.6vw, 48px);
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+  }
+  .lede em { color: var(--accent); font-style: italic; }
+  .body-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+  .body-grid p {
+    font-size: 16px; line-height: 1.7; color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+  .body-grid h3 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 22px; letter-spacing: -0.01em;
+    margin: 0 0 14px;
+  }
+  .timeline {
+    border-top: 1px solid var(--line);
+    margin-top: 64px;
+  }
+  .tl-row {
+    display: grid;
+    grid-template-columns: 160px 220px 1fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-bottom: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .tl-year {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 36px; letter-spacing: -0.02em;
+  }
+  .tl-tag {
+    font-size: 11px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .tl-text { font-size: 16px; color: var(--ink-soft); line-height: 1.6; }
+  @media (max-width: 880px) {
+    .body-grid { grid-template-columns: 1fr; gap: 32px; }
+    .tl-row { grid-template-columns: 1fr; gap: 4px; }
+  }
+  .capability-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .cap {
+    border: 1px solid var(--line);
+    padding: 28px 24px 32px;
+    background: var(--bg);
+    display: flex; flex-direction: column; gap: 16px;
+    min-height: 220px;
+  }
+  .cap .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.2em; color: var(--muted);
+  }
+  .cap h4 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 22px; letter-spacing: -0.01em;
+  }
+  .cap p { font-size: 14px; line-height: 1.6; color: var(--ink-soft); margin: 0; }
+  @media (max-width: 880px) { .capability-grid { grid-template-columns: 1fr; } }
+
+  .factory-strip {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 48px;
+  }
+  .factory-strip .ph {
+    aspect-ratio: 4/5;
+    background: var(--bg-tint);
+    position: relative;
+  }
+  .factory-strip .ph .lbl {
+    position: absolute; bottom: 14px; left: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .factory-strip .ph svg {
+    position: absolute; inset: 0; margin: auto;
+    width: 50%; height: 50%; color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <nav class="nav-menu">
+      <a href="index.html#home" data-i18n="nav_home">Home</a>
+      <a href="about.html" class="active" data-i18n="nav_about">About us</a>
+      <a href="products.html" data-i18n="nav_product">Product</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <span class="lang-switch"><span class="on">EN</span> / 中文</span>
+  </div>
+</header>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About us</a>
+  <a href="products.html" data-i18n="nav_product">Product</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+  <div class="lang"><span class="lang-switch"><span class="on">EN</span> / 中文</span></div>
+</div>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span><span data-i18n="about_crumb">About us</span>
+    </div>
+    <h1 data-i18n="about_title">About Chengda</h1>
+    <div class="sub">
+      <span data-i18n="about_sub1">Founded 1999</span><span data-i18n="about_sub2">Chaozhou · Guangdong</span><span data-i18n="about_sub3">50+ Countries</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="lede" data-i18n="about_lede">Twenty-five years of <em>ceramic mastery</em> — engineered in Chaozhou, deployed across every continent.</p>
+
+    <div class="body-grid" style="margin-top:48px">
+      <div>
+        <h3 data-i18n="about_story_h">Our Story</h3>
+        <p data-i18n="about_story_p1">Founded in 1999, Guangdong Chengda Intelligent Technology Co., Ltd. is a vertically-integrated ceramic sanitaryware manufacturer headquartered in Chaozhou — China's historic ceramic capital.</p>
+        <p data-i18n="about_story_p2">What started as a small workshop firing pedestal basins has grown into a 200+ model platform serving importers, designers and brands in over 50 countries.</p>
+      </div>
+      <div>
+        <h3 data-i18n="about_appr_h">Our Approach</h3>
+        <p data-i18n="about_appr_p1">Every basin and toilet leaves our facility only after passing rigorous QC at every stage: raw clay, slip casting, glazing, high-temperature firing, and final inspection.</p>
+        <p data-i18n="about_appr_p2">We hold CUPC certification for the North-American market and ISO 9001 for our quality management system — the discipline behind every shipment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="cap_h"><em>Capabilities</em><br/>end to end.</h2>
+      <p data-i18n="cap_p">From design and prototyping to global logistics — we cover every step under one roof.</p>
+    </div>
+    <div class="capability-grid">
+      <div class="cap"><div class="num">01 / DESIGN</div><h4 data-i18n="cap1_h">Design &amp; Concept</h4><p data-i18n="cap1_p">3D modeling, dimensional studies and prototyping — turn references into producible drawings.</p></div>
+      <div class="cap"><div class="num">02 / SAMPLING</div><h4 data-i18n="cap2_h">Sample &amp; Approval</h4><p data-i18n="cap2_p">Physical samples reviewed against tolerances, glaze color and surface finish before tooling.</p></div>
+      <div class="cap"><div class="num">03 / PRODUCTION</div><h4 data-i18n="cap3_h">Production &amp; QC</h4><p data-i18n="cap3_p">Slip-cast, dried, glazed, fired and inspected. Strict QC at every stage, with batch traceability.</p></div>
+      <div class="cap"><div class="num">04 / GLAZING</div><h4 data-i18n="cap4_h">Custom Glazing</h4><p data-i18n="cap4_p">White, colored, matte and hand-painted finishes — kiln-fired in our Chaozhou facility.</p></div>
+      <div class="cap"><div class="num">05 / PACKAGING</div><h4 data-i18n="cap5_h">Packaging</h4><p data-i18n="cap5_p">Custom cartons, foam inserts, branded labels and pallet plans — to your specification.</p></div>
+      <div class="cap"><div class="num">06 / LOGISTICS</div><h4 data-i18n="cap6_h">Global Logistics</h4><p data-i18n="cap6_p">FOB, CIF, DDP — established freight partnerships across North America, Europe, ME, SEA and Africa.</p></div>
+    </div>
+
+    <div class="factory-strip">
+      <div class="ph"><span id="f1"></span><span class="lbl">PHOTO · KILN</span></div>
+      <div class="ph"><span id="f2"></span><span class="lbl">PHOTO · SLIP CASTING</span></div>
+      <div class="ph"><span id="f3"></span><span class="lbl">PHOTO · QC INSPECTION</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 data-i18n="tl_h">Twenty-five<br/><em>milestones.</em></h2>
+      <p data-i18n="tl_p">A quarter-century of ceramic engineering.</p>
+    </div>
+    <div class="timeline">
+      <div class="tl-row"><div class="tl-year">1999</div><div class="tl-tag">FOUNDED</div><div class="tl-text" data-i18n="tl_1999">Chengda founded in Chaozhou. First production line for pedestal basins.</div></div>
+      <div class="tl-row"><div class="tl-year">2005</div><div class="tl-tag">EXPORT</div><div class="tl-text" data-i18n="tl_2005">First export contract — entering the South-East Asian market.</div></div>
+      <div class="tl-row"><div class="tl-year">2010</div><div class="tl-tag">ISO 9001</div><div class="tl-text" data-i18n="tl_2010">ISO 9001 quality management certification awarded.</div></div>
+      <div class="tl-row"><div class="tl-year">2015</div><div class="tl-tag">CUPC</div><div class="tl-text" data-i18n="tl_2015">CUPC certification — products approved for the North-American market.</div></div>
+      <div class="tl-row"><div class="tl-year">2020</div><div class="tl-tag">200+ MODELS</div><div class="tl-text" data-i18n="tl_2020">Catalog reaches 200+ models across 6 product platforms.</div></div>
+      <div class="tl-row"><div class="tl-year">2024</div><div class="tl-tag">SMART TOILET</div><div class="tl-text" data-i18n="tl_2024">Smart Toilet platform launched — heated seat, auto flush, dual mounting.</div></div>
+      <div class="tl-row"><div class="tl-year">2026</div><div class="tl-tag" data-i18n="tl_today">TODAY</div><div class="tl-text" data-i18n="tl_2026">Exporting to 50+ countries. Continuously expanding product platforms and markets.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" style="background:var(--ink);color:#fff">
+  <div class="wrap" style="text-align:center">
+    <div class="eyebrow" style="color:rgba(255,255,255,0.5)" data-i18n="partner_eb">PARTNER WITH US</div>
+    <h2 class="font-display" style="font-size:clamp(36px,5vw,72px);margin:20px 0 28px" data-i18n="partner_h">Build your next <em style="color:var(--accent);font-style:italic">collection</em> with us.</h2>
+    <a href="contact.html" class="btn" style="background:#fff;color:var(--ink);border-color:#fff" data-i18n="partner_btn">Start a Conversation →</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chengda <span style="font-size:14px;color:rgba(255,255,255,0.45);letter-spacing:0.4em;font-family:'Noto Serif TC',serif">程達</span></div>
+        <p class="footer-tag" data-i18n="foot_tag">Engineering precision for every space. Premium ceramic platforms since 1999.</p>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
+        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
+        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
+        <a href="about.html" data-i18n="nav_about">About us</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
+        <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot_copy">© 2026 Guangdong Chengda Intelligent Technology Co., Ltd.</span>
+      <span class="lang-switch">EN / 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/icons.js?v=6"></script>
+<script>
+const ICONS = window.CHENGDA_ICONS;
+['f1','f2','f3'].forEach(id => { const el = document.getElementById(id); if (el) el.innerHTML = ICONS.factory; });
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
+</script>
+<script src="assets/i18n.js?v=6"></script>
+
+<script>
+(function(){
+  const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
+  if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

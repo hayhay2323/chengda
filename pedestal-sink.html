@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>Pedestal Sink · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=7" />
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <nav class="nav-menu">
+      <a href="index.html#home" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About us</a>
+      <a href="products.html" class="active" data-i18n="nav_product">Product</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <span class="lang-switch"><span class="on">EN</span> / 中文</span>
+  </div>
+</header>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About us</a>
+  <a href="products.html" data-i18n="nav_product">Product</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+  <div class="lang"><span class="lang-switch"><span class="on">EN</span> / 中文</span></div>
+</div>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span>
+      <a href="products.html" data-i18n="crumb_products">Products</a><span class="sep">/</span>
+      <span data-i18n="ps_crumb">Pedestal Sink</span>
+    </div>
+    <h1 data-i18n="ps_h1">PEDESTAL SINK</h1>
+    <div class="sub">
+      <span data-i18n="sub_wallhung">Wall-Hung</span><span data-i18n="sub_floorstanding">Floor-Standing</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="tab-row" id="tabRow">
+      <button class="tab active" data-sub="all"><span data-i18n="tab_all">All</span> <span class="count">12</span></button>
+      <button class="tab" data-sub="wall"><span data-i18n="tab_wall_p">Wall-Hung</span> <span class="cn" style="font-family:'Noto Serif TC',serif;letter-spacing:.3em;font-size:11px;color:var(--muted);margin-left:6px">掛式柱盆</span> <span class="count">05</span></button>
+      <button class="tab" data-sub="floor"><span data-i18n="tab_floor_p">Floor-Standing</span> <span class="cn" style="font-family:'Noto Serif TC',serif;letter-spacing:.3em;font-size:11px;color:var(--muted);margin-left:6px">立式柱盆</span> <span class="count">07</span></button>
+    </div>
+    <div class="product-grid" id="grid"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chengda <span style="font-size:14px;color:rgba(255,255,255,0.45);letter-spacing:0.4em;font-family:'Noto Serif TC',serif">程達</span></div>
+        <p class="footer-tag" data-i18n="foot_tag_short">Engineering precision for every space.</p>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
+        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
+        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
+        <a href="about.html" data-i18n="nav_about">About us</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
+        <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot_copy">© 2026 Guangdong Chengda Intelligent Technology Co., Ltd.</span>
+      <span class="lang-switch">EN / 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/icons.js?v=6"></script>
+<script>
+const ICONS = window.CHENGDA_ICONS;
+
+const ITEMS = [
+  // Wall-Hung 掛式
+  { code: 'WB101', name: 'Float Wall',  dims: '500 × 420',        sub: 'wall', icon: 'wallhung' },
+  { code: 'WB103', name: 'Linea Wall',  dims: '550 × 440',        sub: 'wall', icon: 'wallhung' },
+  { code: 'WB105', name: 'Plate Wall',  dims: '600 × 460',        sub: 'wall', icon: 'wallhung' },
+  { code: 'WB107', name: 'Edge Wall',   dims: '480 × 380',        sub: 'wall', icon: 'wallhung' },
+  { code: 'WB108', name: 'Crest Wall',  dims: '520 × 400',        sub: 'wall', icon: 'wallhung' },
+  // Floor-Standing 立式
+  { code: 'PB101', name: 'Classic Pillar', dims: '560 × 460 × 850', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB108', name: 'Slim Column',    dims: '520 × 440 × 840', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB115', name: 'Atelier',        dims: '600 × 480 × 850', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB122', name: 'Forma',          dims: '550 × 450 × 845', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB130', name: 'Lirio',          dims: '580 × 460 × 850', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB144', name: 'Toro',           dims: '610 × 470 × 855', sub: 'floor', icon: 'pedestal' },
+  { code: 'PB158', name: 'Mira Column',    dims: '590 × 460 × 850', sub: 'floor', icon: 'pedestal' },
+];
+
+const params = new URLSearchParams(location.search);
+let sub = params.get('sub') || 'all';
+const tabRow = document.getElementById('tabRow');
+tabRow.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.sub === sub));
+
+const grid = document.getElementById('grid');
+function render() {
+  const items = sub === 'all' ? ITEMS : ITEMS.filter(i => i.sub === sub);
+  grid.innerHTML = items.map(it => `
+    <a class="pcard" href="#">
+      <div class="img">
+        ${ICONS[it.icon]}
+        <span class="code-tag">${it.code}</span>
+      </div>
+      <div class="info">
+        <div class="code">${it.code} · ${it.sub === 'wall' ? '掛式' : '立式'}</div>
+        <div class="name">${it.name}</div>
+        <div class="dims">${it.dims} mm</div>
+      </div>
+    </a>`).join('');
+}
+render();
+if (window.__applyI18n) window.__applyI18n();
+
+tabRow.addEventListener('click', e => {
+  const b = e.target.closest('.tab');
+  if (!b) return;
+  sub = b.dataset.sub;
+  tabRow.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t === b));
+  render();
+  if (window.__applyI18n) window.__applyI18n();
+});
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
+</script>
+<script src="assets/i18n.js?v=6"></script>
+
+<script>
+(function(){
+  const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
+  if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

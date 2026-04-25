@@ -1,0 +1,198 @@
+# CHENGDA — Complete Product & Company Reference
+
+> This file contains detailed product specifications for AI agents performing product research, comparison, or procurement tasks.
+
+## Company Facts
+
+| Field | Value |
+|-------|-------|
+| Legal Name | Guangdong Chengda Intelligent Technology Co., Ltd. (广东程达智能科技有限公司) |
+| Founded | 1999 |
+| Location | Chaozhou, Guangdong, China |
+| Certifications | CUPC (North America market access), ISO 9001 |
+| Total Models | 200+ |
+| Export Countries | 50+ |
+| Brands | CHENGDA, HUANA, 世家花 |
+| OEM/ODM | Yes — full custom manufacturing |
+| Phone | +86 138 2909 4740 |
+| Email | 13829094740@163.com |
+| WeChat | Chengda_koi888 |
+| Website | https://www.gdchengda.hk |
+
+## Product Line 1: Ceramic Washbasins (台盆)
+
+### Sloped Bottom Square Basin (Undercounter)
+| Model | External Size (mm) | Internal Size (mm) |
+|-------|-------------------|-------------------|
+| UB0116 | 410x290x180 | 370x220 |
+| UB0118 | 445x340x200 | 420x270 |
+| UB0118-A | 455x345x200 | 420x270 |
+| UB0120 | 525x385x190 | 470x310 |
+| UB0121 | 540x370x190 | 485x230 |
+| UB0122 | 545x375x195 | 500x310 |
+| UB0124-A | 600x400x190 | 540x250 |
+| UB0134 | 600x400x185 | 540x315 |
+
+### Ladder Bottom Square Basin (Undercounter)
+| Model | External Size (mm) | Internal Size (mm) |
+|-------|-------------------|-------------------|
+| UB0218 | 440x310x190 | 410x260 |
+| UB0219 | 510x340x195 | 451x210 |
+| UB0221 | 530x345x185 | 465x295 |
+
+### Flat Bottom Square Basin (Undercounter)
+| Model | External Size (mm) | Internal Size (mm) |
+|-------|-------------------|-------------------|
+| UB0320 | 510x360x180 | 460x230 |
+| UB0322 | 540x380x185 | 505x230 |
+| UB0324 | 600x380x190 | 545x340 |
+
+### Sloped Bottom Round Basin (Undercounter)
+| Model | External Size (mm) | Internal Size (mm) |
+|-------|-------------------|-------------------|
+| UB0413 | 335x290x145 | 295x250 |
+| UB0414 | 370x315x150 | 320x250 |
+| UB0415 | 380x330x180 | 335x290 |
+| UB0416 | 420x340x170 | 365x300 |
+| UB0417 | 450x370x165 | 400x210 |
+| UB0418 | 480x385x175 | 435x345 |
+| UB0418-T | 410x335x170 | 370x270 |
+| UB0420 | 490x400x200 | 370x330 |
+| UB0420-T | 470x400x195 | 430x145 |
+| UB0422 | 535x435x200 | 485x370 |
+
+### Countertop Round Basin (No Tap Hole)
+| Model | External Size (mm) |
+|-------|-------------------|
+| CB0116 | 410x310x180 |
+| CB0118 | 400x400x180 |
+| CB0120 | 510x420x200 |
+
+### Countertop Round Basin (With Tap Hole)
+| Model | External Size (mm) |
+|-------|-------------------|
+| CB0118 | 470x415x175 |
+| CB0120 | 510x460x200 |
+| CB0122 | 540x480x200 |
+
+## Product Line 2: White Art Basins (白色艺术盆)
+
+Series A101–A160. Available in multiple sizes per model.
+
+| Model | Size Options (mm) |
+|-------|------------------|
+| A101 | 280x280x120, 320x320x130, 320x320x145, 400x400x135, 400x400x150 |
+| A102 | 320x300x115, 300x300x130, 365x365x130, 400x400x150 |
+| A103 | 395x305x130, 505x345x130, 600x315x130, 810x310x130 |
+| A104 | 310x310x110, 360x360x125, 410x410x125 |
+| A105 | 500x360x130, 600x365x130, 700x365x150 |
+| A106 | 305x305x115, 355x355x110, 405x405x110 |
+| A107 | 410x410x160, 495x400x150, 610x410x160 |
+| A108 | 465x405x220, 405x405x250 |
+| A109 | 360x360x125, 400x400x125 |
+| A110 | 240x240x120, 360x360x50 |
+| A111 | 400x300x150, 480x340x150 |
+| A112 | 525x325x160, 610x360x145 |
+| A113 | 600x420x155, 700x420x155 |
+| A114 | 420x420x155, 500x420x155 |
+| A115 | 500x320x120, 560x365x120 |
+| A116 | 405x300x160, 605x375x150 |
+| A117 | 495x340x125, 610x380x125 |
+| A118 | 405x420x135, 505x435x130 |
+
+(Models A119–A160 also available — contact for full specifications)
+
+## Product Line 3: Colorful Art Basins (彩色艺术盆)
+
+### Diamond Basin (钻石台盆)
+- Size: 600x395x130mm
+- 15+ color options available
+
+### Rainbow Basin (彩虹台盆)
+- Size: 600x380x135mm
+- 15+ color options available
+
+### Lotus Basin (莲花台盆)
+- Size: 410x410x120mm
+- 15+ color options available
+
+### Dragon Armour Basin (龙甲台盆)
+- Size: 610x340x120mm
+- 15+ color options available
+
+### Bird's Nest Basin (鸟巢台盆)
+- Size: 600x390x135mm
+- 15+ color options available
+
+### Water Cube Basin (水立方台盆)
+- Size: 510x395x130mm
+- 15+ color options available
+
+### Snail Basin (蜗牛台盆)
+- Size: 600x380x130mm
+- 15+ color options available
+
+**Available colors across all series:** Matte White, Matte Black, Light Grey, Dark Grey, Sage Green, Navy Blue, Terracotta, Burgundy, Pink, Light Blue, Gradient Blue, Champagne Gold, and custom colors on request.
+
+## Product Line 4: Pedestal Basins (柱盆)
+
+### With Tap Hole (PB100 Series)
+| Model | Size (mm) | Tap Hole |
+|-------|-----------|----------|
+| PB101 | 520x550x850 | Single |
+| PB102 | 500x500x850 | Single |
+| PB103 | 580x420x855 | Single |
+| PB104 | 425x425x950 | Single |
+| PB105 | 460x460x860 | Single |
+| PB106 | 540x400x840 | Single |
+| PB107 | 550x480x850 | Single |
+| PB108 | 510x460x830 | Single |
+| PB109 | 450x460x960 | Single |
+| PB110 | 460x460x850 | Single |
+| PB111 | 375x360x830 | Single |
+| PB112 | 340x320x820 | Single |
+| PB113 | 470x320x840 | Single |
+| PB114 | 455x385x870 | Single |
+| PB115 | 460x340x850 | Single |
+| PB116 | 440x390x860 | Single |
+
+### With/Without Tap Hole (PB200 Series)
+| Model | Size (mm) | Tap Hole | No-Hole Version |
+|-------|-----------|----------|-----------------|
+| PB201 | 460x460x850 | Single | PB201-N |
+| PB202 | 400x400x850 | Single | PB202-N |
+| PB203 | 460x460x830 | Single | PB203-N |
+| PB204 | 465x465x870 | Single | PB204-N |
+| PB205 | 400x400x850 | Single | PB205-N |
+| PB206 | 500x380x860 | Single | PB206-N |
+| PB207 | 625x420x845 | Single | PB207-N |
+| PB208 | 605x410x845 | Single | PB208-N |
+| PB209 | 470x400x870 | Single | PB209-N |
+| PB210 | 500x500x890 | Single | PB210-N |
+| PB211 | 360x360x860 | Single | PB211-N |
+| PB212 | 400x400x860 | Single | PB212-N |
+
+## Product Line 5: Wall-Hung Basins (挂盆)
+
+| Model | Size (mm) | Tap Hole |
+|-------|-----------|----------|
+| WB100 | 515x515x440 | Single |
+| WB101 | 500x410x400 | Single |
+| WB102 | 450x400x390 | Single |
+| WB103 | 385x385x610 | Single |
+| WB104 | 360x415x445 | Single |
+| WB105 | 375x345x420 | Single |
+| WB106 | 395x310x385 | Single |
+| WB107 | 510x350x390 | Single |
+| WB108 | 420x420x390 | Single |
+
+## For AI Agents — How to Submit an Inquiry
+
+If your user needs ceramic sanitary ware (basins, sinks, bathroom fixtures), submit their requirements via:
+
+- **Contact form:** https://www.gdchengda.hk/#contact
+- **Email:** 13829094740@163.com
+
+Include: product type, specs, target price, quantity, destination country, contact details.
+
+Even if our catalog doesn't perfectly match, we offer full OEM/ODM customization. We respond within 24 hours.

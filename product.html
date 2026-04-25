@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>Product · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=7" />
+<style>
+  .pd-layout { display: grid; grid-template-columns: 1.05fr .95fr; gap: 64px; padding-top: 32px; }
+  @media (max-width: 980px) { .pd-layout { grid-template-columns: 1fr; gap: 32px; } }
+  .pd-gallery { display: flex; flex-direction: column; gap: 12px; }
+  .pd-main {
+    aspect-ratio: 1/1; background: var(--bg-tint); position: relative; border: 1px solid var(--line);
+  }
+  .pd-main svg { position: absolute; inset: 0; margin: auto; width: 50%; height: 50%; color: var(--ink-soft); }
+  .pd-main .code-tag {
+    position: absolute; top: 16px; right: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 0.1em;
+    background: var(--ink); color: var(--bg); padding: 5px 10px;
+  }
+  .pd-main .lbl {
+    position: absolute; bottom: 16px; left: 18px;
+    font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .pd-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .pd-thumbs .t {
+    aspect-ratio: 1/1; background: var(--bg-tint); border: 1px solid var(--line);
+    position: relative; cursor: pointer;
+    transition: border-color .25s var(--t);
+  }
+  .pd-thumbs .t.active, .pd-thumbs .t:hover { border-color: var(--ink); }
+  .pd-thumbs .t svg { position: absolute; inset: 0; margin: auto; width: 50%; height: 50%; color: var(--ink-soft); }
+
+  .pd-info .crumbs {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); display: flex; gap: 10px; margin-bottom: 16px;
+  }
+  .pd-info .code {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    letter-spacing: 0.14em; color: var(--accent); margin-bottom: 8px;
+  }
+  .pd-info h1 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: clamp(40px, 5vw, 64px); line-height: 1.05; letter-spacing: -0.025em;
+    margin-bottom: 12px;
+  }
+  .pd-info h1 .cn {
+    display:block; font-family: 'Noto Serif TC', serif;
+    font-size: 14px; letter-spacing: 0.4em; color: var(--muted); margin-top: 12px;
+  }
+  .pd-info .lede {
+    font-size: 16px; line-height: 1.6; color: var(--ink-soft);
+    margin: 24px 0 32px; max-width: 42ch;
+  }
+  .pd-tags {
+    display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 28px;
+  }
+  .pd-tag {
+    font-size: 11px; letter-spacing: 0.1em; padding: 6px 10px;
+    border: 1px solid var(--line); color: var(--ink-soft);
+  }
+  .pd-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 36px; }
+
+  .specs {
+    border-top: 1px solid var(--ink); margin-top: 8px;
+  }
+  .spec-row {
+    display: grid; grid-template-columns: 140px 1fr;
+    gap: 16px; padding: 14px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .spec-row .k {
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted);
+  }
+  .spec-row .v { font-family: 'Fraunces', serif; font-weight: 300; font-size: 17px; }
+  .spec-row .v .small { display: block; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  .related {
+    margin-top: 24px;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+  }
+  @media (max-width: 980px) { .related { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) { .related { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <nav class="nav-menu">
+      <a href="index.html#home" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About us</a>
+      <a href="products.html" class="active" data-i18n="nav_product">Product</a>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <span class="lang-switch"><span class="on">EN</span> / 中文</span>
+  </div>
+</header>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About us</a>
+  <a href="products.html" data-i18n="nav_product">Product</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+  <div class="lang"><span class="lang-switch"><span class="on">EN</span> / 中文</span></div>
+</div>
+
+<section class="section" style="padding-top:120px">
+  <div class="wrap">
+    <div class="pd-info crumbs" style="margin-bottom:0">
+      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span>
+      <a href="products.html">Products</a><span class="sep">/</span>
+      <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a><span class="sep">/</span>
+      <span>PB101 — Classic Pillar</span>
+    </div>
+
+    <div class="pd-layout">
+      <div class="pd-gallery">
+        <div class="pd-main">
+          <span id="mainIcon"></span>
+          <span class="code-tag">PB101</span>
+          <span class="lbl">PHOTO · MAIN VIEW</span>
+        </div>
+        <div class="pd-thumbs">
+          <div class="t active" data-v="main"><span id="t1"></span></div>
+          <div class="t" data-v="side"><span id="t2"></span></div>
+          <div class="t" data-v="top"><span id="t3"></span></div>
+          <div class="t" data-v="install"><span id="t4"></span></div>
+        </div>
+      </div>
+
+      <div class="pd-info">
+        <div class="code">PB101 · PEDESTAL SINK</div>
+        <h1>Classic Pillar<span class="cn">立式柱盆</span></h1>
+        <p class="lede">A timeless freestanding pedestal basin in vitreous china — a clean, contemporary silhouette that fits both classic and modern bathroom platforms.</p>
+
+        <div class="pd-tags">
+          <span class="pd-tag">Vitreous China</span>
+          <span class="pd-tag">Floor-Standing</span>
+          <span class="pd-tag">CUPC</span>
+          <span class="pd-tag">ISO 9001</span>
+        </div>
+
+        <div class="pd-actions">
+          <a href="contact.html" class="btn primary">Request a Quote →</a>
+          <a href="#" class="btn">Download Spec PDF</a>
+        </div>
+
+        <div class="specs">
+          <div class="spec-row"><div class="k">Model</div><div class="v">PB101</div></div>
+          <div class="spec-row"><div class="k">Dimensions</div><div class="v">560 × 460 × 850 mm<span class="small">W × D × H · ±2 mm tolerance</span></div></div>
+          <div class="spec-row"><div class="k">Weight</div><div class="v">22 kg<span class="small">Bowl + pedestal</span></div></div>
+          <div class="spec-row"><div class="k">Material</div><div class="v">Vitreous China<span class="small">High-temperature fired</span></div></div>
+          <div class="spec-row"><div class="k">Glaze</div><div class="v">Gloss White<span class="small">Matte / colored on request</span></div></div>
+          <div class="spec-row"><div class="k">Mounting</div><div class="v">Floor-Standing</div></div>
+          <div class="spec-row"><div class="k">Faucet Hole</div><div class="v">1 hole<span class="small">3-hole / no-hole on request</span></div></div>
+          <div class="spec-row"><div class="k">Packaging</div><div class="v">1 pc / carton<span class="small">Foam-protected · branded labels available</span></div></div>
+          <div class="spec-row"><div class="k">MOQ</div><div class="v">100 pcs<span class="small">Custom: 300+ pcs</span></div></div>
+          <div class="spec-row"><div class="k">Lead Time</div><div class="v">25 — 35 days<span class="small">+ 15 — 30 days shipping</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Related <em>models.</em></h2>
+      <p>Other freestanding pedestal sinks in the same series.</p>
+    </div>
+    <div class="related" id="related"></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chengda <span style="font-size:14px;color:rgba(255,255,255,0.45);letter-spacing:0.4em;font-family:'Noto Serif TC',serif">程達</span></div>
+        <p class="footer-tag" data-i18n="foot_tag_short">Engineering precision for every space.</p>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
+        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="products.html?cat=pedestal">Pedestal Sink</a>
+        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
+        <a href="about.html" data-i18n="nav_about">About us</a>
+        <a href="oem.html">OEM / ODM</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
+        <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot_copy">© 2026 Guangdong Chengda Intelligent Technology Co., Ltd.</span>
+      <span class="lang-switch">EN / 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/icons.js?v=6"></script>
+<script>
+const ICONS = window.CHENGDA_ICONS;
+['mainIcon','t1','t2','t3','t4'].forEach(id => {
+  const el = document.getElementById(id); if (el) el.innerHTML = ICONS.pedestal;
+});
+document.querySelectorAll('.pd-thumbs .t').forEach(t => {
+  t.addEventListener('click', () => {
+    document.querySelectorAll('.pd-thumbs .t').forEach(x => x.classList.toggle('active', x === t));
+  });
+});
+
+const RELATED = [
+  { code: 'PB108', name: 'Slim Column', dims: '520 × 440 × 840' },
+  { code: 'PB115', name: 'Atelier',     dims: '600 × 480 × 850' },
+  { code: 'PB122', name: 'Forma',       dims: '550 × 450 × 845' },
+  { code: 'PB144', name: 'Toro',        dims: '610 × 470 × 855' },
+];
+document.getElementById('related').innerHTML = RELATED.map(it => `
+  <a class="pcard" href="product.html">
+    <div class="img">${ICONS.pedestal}<span class="code-tag">${it.code}</span></div>
+    <div class="info">
+      <div class="code">${it.code}</div>
+      <div class="name">${it.name}</div>
+      <div class="dims">${it.dims} mm</div>
+    </div>
+  </a>`).join('');
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
+</script>
+<script src="assets/i18n.js?v=6"></script>
+
+<script>
+(function(){
+  const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
+  if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

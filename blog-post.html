@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>Article · Chengda</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+TC:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css?v=7" />
+<style>
+  .article-hero {
+    padding: 32px 0 56px;
+    border-bottom: 1px solid var(--line);
+  }
+  .article-hero .crumbs { margin-bottom: 32px; }
+  .article-hero .meta-line {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .article-hero .meta-line .tag { color: var(--accent); }
+  .article-hero h1 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: clamp(36px, 5.5vw, 72px);
+    line-height: 1.02; letter-spacing: -0.03em;
+    max-width: 22ch;
+  }
+  .article-hero .lede {
+    margin-top: 28px;
+    max-width: 64ch;
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--ink-soft);
+  }
+
+  .article-cover {
+    aspect-ratio: 16/8;
+    background: var(--bg-tint);
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .article-cover svg {
+    position: absolute; inset: 0; margin: auto;
+    width: 30%; height: 30%; color: var(--ink-soft); opacity: 0.55;
+  }
+  .article-cover .lbl {
+    position: absolute; bottom: 18px; left: 24px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--muted); text-transform: uppercase;
+  }
+
+  .article-body {
+    max-width: 720px;
+    margin: 64px auto 0;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+  }
+  .article-body h2 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 30px;
+    color: var(--ink);
+    line-height: 1.2; letter-spacing: -0.015em;
+    margin: 56px 0 16px;
+  }
+  .article-body p { margin: 0 0 18px; text-wrap: pretty; }
+  .article-body ul {
+    margin: 0 0 24px; padding: 0;
+    list-style: none;
+  }
+  .article-body ul li {
+    padding: 14px 0 14px 28px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .article-body ul li::before {
+    content: '—';
+    position: absolute; left: 0; color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .share-row {
+    max-width: 720px; margin: 56px auto 0;
+    display: flex; gap: 12px; align-items: center;
+    padding: 24px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px; letter-spacing: 0.16em;
+    text-transform: uppercase; color: var(--muted);
+  }
+  .share-row span { margin-right: auto; }
+  .share-row button {
+    background: transparent; border: 1px solid var(--line);
+    padding: 8px 14px;
+    font: inherit; color: var(--ink-soft);
+    cursor: pointer;
+    transition: all .25s var(--t);
+  }
+  .share-row button:hover { border-color: var(--ink); color: var(--ink); }
+
+  .related {
+    margin-top: 96px;
+    padding-top: 48px;
+    border-top: 1px solid var(--ink);
+  }
+  .related h2 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 28px; letter-spacing: -0.02em;
+    margin-bottom: 32px;
+  }
+  .related-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .related-card {
+    color: inherit;
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    transition: border-color .25s var(--t);
+  }
+  .related-card:hover { border-color: var(--ink); }
+  .related-card .meta-l {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--muted);
+    margin-bottom: 12px;
+    display: flex; gap: 16px;
+  }
+  .related-card .meta-l .t { color: var(--accent); }
+  .related-card h3 {
+    font-family: 'Fraunces', serif; font-weight: 300;
+    font-size: 19px; line-height: 1.3;
+  }
+  @media (max-width: 880px) {
+    .related-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <nav class="nav-menu">
+      <a href="index.html#home" data-i18n="nav_home">Home</a>
+      <a href="about.html" data-i18n="nav_about">About us</a>
+      <a href="products.html" data-i18n="nav_product">Product</a>
+      <a href="blog.html" class="active" data-i18n="nav_blog">Blog</a>
+      <a href="news.html" data-i18n="nav_news">News</a>
+      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+    </nav>
+    <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <span class="lang-switch"><span class="on">EN</span> / 中文</span>
+  </div>
+</header>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" data-i18n="nav_home">Home</a>
+  <a href="about.html" data-i18n="nav_about">About us</a>
+  <a href="products.html" data-i18n="nav_product">Product</a>
+  <a href="blog.html" data-i18n="nav_blog">Blog</a>
+  <a href="news.html" data-i18n="nav_news">News</a>
+  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+</div>
+
+<section class="article-hero">
+  <div class="wrap">
+    <div class="crumbs">
+      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span>
+      <a href="blog.html" data-i18n="nav_blog">Blog</a><span class="sep">/</span>
+      <span id="crumbTitle">Article</span>
+    </div>
+    <div class="meta-line">
+      <span id="postDate">—</span>
+      <span class="tag" id="postTag">—</span>
+      <span id="postRead">—</span>
+    </div>
+    <h1 id="postTitle">Loading…</h1>
+    <p class="lede" id="postLede"></p>
+  </div>
+</section>
+
+<figure class="article-cover">
+  <span id="coverIcon"></span>
+  <span class="lbl">PHOTO · PLACEHOLDER</span>
+</figure>
+
+<section class="section">
+  <div class="wrap">
+    <article class="article-body" id="postBody"></article>
+
+    <div class="share-row">
+      <span data-i18n="blog_share">Share this article</span>
+      <button onclick="navigator.clipboard.writeText(location.href).then(()=>this.textContent= getLang()==='zh'?'已複製':'Copied')" data-i18n="blog_copy">Copy link</button>
+      <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(location.href))" data-i18n="blog_email">Email</button>
+    </div>
+
+    <div class="related">
+      <h2 data-i18n="blog_related">Continue reading</h2>
+      <div class="related-grid" id="related"></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Chengda <span style="font-size:14px;color:rgba(255,255,255,0.45);letter-spacing:0.4em;font-family:'Noto Serif TC',serif">程達</span></div>
+        <p class="footer-tag" data-i18n="foot_tag_short">Engineering precision for every space.</p>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
+        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
+        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
+        <a href="about.html" data-i18n="nav_about">About us</a>
+        <a href="blog.html" data-i18n="nav_blog">Blog</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      </div>
+      <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
+        <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
+        <a href="#" data-i18n="foot_certs">Certifications</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="foot_copy">© 2026 Guangdong Chengda Intelligent Technology Co., Ltd.</span>
+      <span class="lang-switch">EN / 中文</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/icons.js?v=6"></script>
+<script src="assets/blog-data.js?v=6"></script>
+<script>
+const ICONS = window.CHENGDA_ICONS;
+function getLang() { return localStorage.getItem('cd_lang') || 'en'; }
+
+const TAG_LABELS = {
+  care:   { en: 'CARE & MAINTENANCE', zh: '保養與維護' },
+  craft:  { en: 'CRAFT & INDUSTRY',   zh: '工藝與產業' },
+  design: { en: 'DESIGN NOTES',       zh: '設計筆記' },
+  oem:    { en: 'OEM PLAYBOOK',       zh: 'OEM 操作手冊' },
+};
+const READ = { en: 'min read', zh: '分鐘' };
+
+const id = new URLSearchParams(location.search).get('id') || 'p1';
+const post = window.BLOG_POSTS.find(p => p.id === id) || window.BLOG_POSTS[0];
+
+document.getElementById('coverIcon').innerHTML = ICONS.factory;
+
+function renderPost() {
+  const lang = getLang();
+  document.getElementById('crumbTitle').textContent = post.title[lang] || post.title.en;
+  document.getElementById('postDate').textContent = post.date[lang] || post.date.en;
+  document.getElementById('postTag').textContent = TAG_LABELS[post.tag][lang];
+  document.getElementById('postRead').textContent = post.read + ' ' + READ[lang];
+  document.getElementById('postTitle').textContent = post.title[lang] || post.title.en;
+  document.getElementById('postLede').textContent = post.excerpt[lang] || post.excerpt.en;
+  document.title = (post.title[lang] || post.title.en) + ' · Chengda';
+
+  const body = post.body[lang] || post.body.en;
+  document.getElementById('postBody').innerHTML = body.map(([t, c]) => {
+    if (t === 'h2') return `<h2>${c}</h2>`;
+    if (t === 'p')  return `<p>${c}</p>`;
+    if (t === 'ul') return `<ul>${c.map(li => `<li>${li}</li>`).join('')}</ul>`;
+    return '';
+  }).join('');
+
+  const related = window.BLOG_POSTS.filter(p => p.id !== post.id).slice(0, 3);
+  document.getElementById('related').innerHTML = related.map(p => `
+    <a class="related-card" href="blog-post.html?id=${p.id}">
+      <div class="meta-l"><span>${p.date[lang] || p.date.en}</span><span class="t">${TAG_LABELS[p.tag][lang].split(' ')[0]}</span></div>
+      <h3>${p.title[lang] || p.title.en}</h3>
+    </a>
+  `).join('');
+}
+renderPost();
+window.addEventListener('storage', e => { if (e.key === 'cd_lang') renderPost(); });
+document.addEventListener('click', e => { if (e.target.closest('[data-set-lang]')) setTimeout(renderPost, 50); });
+
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 12));
+</script>
+<script src="assets/i18n.js?v=6"></script>
+<script>
+(function(){
+  const b = document.querySelector('.nav-burger'); const d = document.getElementById('navDrawer');
+  if (b && d) b.addEventListener('click', () => d.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>
