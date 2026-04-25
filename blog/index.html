@@ -177,35 +177,35 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="index.html" class="brand">Chengda <span class="cn">程達</span></a>
+    <a href="/" class="brand">Chengda <span class="cn">程達</span></a>
     <nav class="nav-menu">
-      <a href="index.html#home" data-i18n="nav_home">Home</a>
-      <a href="about.html" data-i18n="nav_about">About us</a>
-      <a href="products.html" data-i18n="nav_product">Product</a>
-      <a href="blog.html" class="active" data-i18n="nav_blog">Blog</a>
-      <a href="news.html" data-i18n="nav_news">News</a>
-      <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+      <a href="/#home" data-i18n="nav_home">Home</a>
+      <a href="/about/" data-i18n="nav_about">About us</a>
+      <a href="/products/" data-i18n="nav_product">Product</a>
+      <a href="/blog/" class="active" data-i18n="nav_blog">Blog</a>
+      <a href="/news/" data-i18n="nav_news">News</a>
+      <a href="/contact/" data-i18n="nav_contact">Contact us</a>
     </nav>
     <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
-    <a href="contact.html" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
+    <a href="/contact/" class="nav-cta" data-i18n="nav_quote">Get a Quote →</a>
     <span class="lang-switch"><span class="on">EN</span> / 中文</span>
   </div>
 </header>
 <div class="nav-drawer" id="navDrawer">
-  <a href="index.html" data-i18n="nav_home">Home</a>
-  <a href="about.html" data-i18n="nav_about">About us</a>
-  <a href="products.html" data-i18n="nav_product">Product</a>
-  <a href="blog.html" data-i18n="nav_blog">Blog</a>
-  <a href="news.html" data-i18n="nav_news">News</a>
-  <a href="contact.html" data-i18n="nav_contact">Contact us</a>
-  <a href="contact.html" data-i18n="nav_quote">Get a Quote →</a>
+  <a href="/" data-i18n="nav_home">Home</a>
+  <a href="/about/" data-i18n="nav_about">About us</a>
+  <a href="/products/" data-i18n="nav_product">Product</a>
+  <a href="/blog/" data-i18n="nav_blog">Blog</a>
+  <a href="/news/" data-i18n="nav_news">News</a>
+  <a href="/contact/" data-i18n="nav_contact">Contact us</a>
+  <a href="/contact/" data-i18n="nav_quote">Get a Quote →</a>
   <div class="lang"><span class="lang-switch"><span class="on">EN</span> / 中文</span></div>
 </div>
 
 <section class="subpage-hero">
   <div class="wrap">
     <div class="crumbs">
-      <a href="index.html" data-i18n="nav_home">Home</a><span class="sep">/</span><span data-i18n="nav_blog">Blog</span>
+      <a href="/" data-i18n="nav_home">Home</a><span class="sep">/</span><span data-i18n="nav_blog">Blog</span>
     </div>
     <h1 data-i18n="blog_h1">Journal</h1>
     <div class="sub">
@@ -224,7 +224,7 @@
         <span class="tag" data-i18n="blog_feat_tag">FEATURED · CRAFT</span>
         <h2 data-i18n="blog_feat_h">From clay to <em>vitreous china</em> — what makes a Chengda basin different.</h2>
         <p class="lede" data-i18n="blog_feat_p">A walkthrough of our 14-step ceramic process — from raw kaolin sourcing to the 1,250 °C kiln cycle that gives every Chengda piece its glass-hard, low-porosity finish.</p>
-        <a href="blog-post.html?id=p1" class="btn primary"><span data-i18n="blog_read_full">Read the full piece</span> →</a>
+        <a href="/blog-post/?id=p1" class="btn primary"><span data-i18n="blog_read_full">Read the full piece</span> →</a>
       </div>
     </div>
 
@@ -268,16 +268,16 @@
         <p class="footer-tag" data-i18n="foot_tag_short">Engineering precision for every space.</p>
       </div>
       <div class="footer-col"><h4 data-i18n="foot_product">Product</h4>
-        <a href="products.html?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
-        <a href="products.html?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
-        <a href="products.html?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
-        <a href="products.html?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
+        <a href="/products/?cat=washbasin" data-i18n="foot_washbasin">Washbasin</a>
+        <a href="/products/?cat=pedestal" data-i18n="foot_pedestal">Pedestal Sink</a>
+        <a href="/products/?cat=standard" data-i18n="foot_standard">Standard Toilet</a>
+        <a href="/products/?cat=smart" data-i18n="foot_smart">Smart Toilet</a>
       </div>
       <div class="footer-col"><h4 data-i18n="foot_company">Company</h4>
-        <a href="about.html" data-i18n="nav_about">About us</a>
-        <a href="blog.html" data-i18n="nav_blog">Blog</a>
-        <a href="news.html" data-i18n="nav_news">News</a>
-        <a href="contact.html" data-i18n="nav_contact">Contact us</a>
+        <a href="/about/" data-i18n="nav_about">About us</a>
+        <a href="/blog/" data-i18n="nav_blog">Blog</a>
+        <a href="/news/" data-i18n="nav_news">News</a>
+        <a href="/contact/" data-i18n="nav_contact">Contact us</a>
       </div>
       <div class="footer-col"><h4 data-i18n="foot_resources">Resources</h4>
         <a href="#" data-i18n="foot_catalog">Catalog 2026</a>
@@ -335,7 +335,7 @@ function render() {
     return;
   }
   list.innerHTML = items.map(p => `
-    <a class="post-row" href="blog-post.html?id=${p.id}">
+    <a class="post-row" href="/blog-post/?id=${p.id}">
       <div class="date">${p.date[lang] || p.date.en}</div>
       <div class="tag">${TAG_LABELS[p.tag][lang]}</div>
       <h3>${p.title[lang] || p.title.en}</h3>
