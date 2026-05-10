@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8" />
+<title>聯絡 · 程達</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="聯絡程達 — 24 小時內回覆。歡迎 OEM/ODM 合作。" />
+<link rel="canonical" href="https://www.gdchengda.hk/zh/contact/" />
+<link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/contact/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/contact/" />
+<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/contact/" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/porcelain.css?v=2" />
+<style>
+  body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: start; }
+  @media (max-width: 980px) { .contact-layout { grid-template-columns: 1fr; gap: 40px; } }
+  .ci-block { margin-bottom: 32px; }
+  .ci-block h3 { font-size: 13px; font-family: var(--font-mono); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+  .submit-btn { background: var(--ink); color: #fff; border: 0; border-radius: var(--r-pill); padding: 0 24px; height: 48px; font: inherit; font-weight: 500; cursor: pointer; transition: background .2s var(--t); }
+  .submit-btn:hover { background: #000; }
+</style>
+</head>
+<body>
+
+<div id="shell-nav"></div>
+
+<section class="subpage-hero">
+  <div class="wrap">
+    <div class="crumbs"><a href="/zh/">首頁</a><span class="sep">/</span><span>聯絡</span></div>
+    <h1>取得 <span class="soft">聯繫。</span></h1>
+    <div class="sub">
+      <span>24 小時回覆</span><span>歡迎 OEM / ODM</span><span>50+ 國家</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="contact-layout">
+      <div>
+        <div class="ci-block">
+          <h3>總部</h3>
+          <div class="data-row"><div class="k">地址</div><div class="v">中國 廣東 潮州<span class="small">生產工廠</span></div></div>
+          <div class="data-row"><div class="k">辦公時間</div><div class="v">週一 — 週六<span class="small">09:00 – 18:00 (GMT+8)</span></div></div>
+        </div>
+        <div class="ci-block">
+          <h3>直接聯絡</h3>
+          <div class="data-row"><div class="k">電話</div><div class="v">+86 138 2909 4740</div></div>
+          <div class="data-row"><div class="k">電郵</div><div class="v">13829094740@163.com</div></div>
+          <div class="data-row"><div class="k">微信</div><div class="v">Chengda_koi888</div></div>
+        </div>
+        <div class="ci-block">
+          <h3>部門</h3>
+          <div class="data-row"><div class="k">業務</div><div class="v">sales@gdchengda.hk<span class="small">報價 · MOQ · 交期</span></div></div>
+          <div class="data-row"><div class="k">OEM / ODM</div><div class="v">oem@gdchengda.hk<span class="small">客製造型 · 釉色 · 包裝</span></div></div>
+          <div class="data-row"><div class="k">媒體</div><div class="v">press@gdchengda.hk</div></div>
+        </div>
+      </div>
+      <div>
+        <div class="form-card">
+          <h3 style="font-size:13px;font-family:var(--font-mono);font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--muted);margin-bottom:20px">提交詢價</h3>
+          <form class="form-grid" onsubmit="event.preventDefault(); document.getElementById('thanks').style.display='block'; this.style.display='none'">
+            <label>姓名 *<input type="text" required /></label>
+            <label>公司<input type="text" /></label>
+            <label>電郵 *<input type="email" required /></label>
+            <label>電話<input type="tel" /></label>
+            <label>國家 / 地區<input type="text" /></label>
+            <label>採購類型
+              <select><option>批發 / 經銷</option><option>OEM / ODM</option><option>項目 / 工程</option><option>樣品 / 詢盤</option></select>
+            </label>
+            <label class="full">預估數量<input type="text" placeholder="例如:500 件 · 1 × 40HQ 貨櫃" /></label>
+            <label class="full">訊息 *<textarea required placeholder="請告訴我們:目標市場、交期、客製需求……"></textarea></label>
+            <div class="submit-row" style="grid-column:1/-1">
+              <span class="note">24 小時內回覆</span>
+              <button class="submit-btn" type="submit">送出詢價 →</button>
+            </div>
+          </form>
+          <div id="thanks" style="display:none;text-align:center;padding:40px 0">
+            <div style="font-size:32px;font-weight:500;letter-spacing:-0.02em;margin-bottom:10px">已收到。</div>
+            <p style="color:var(--muted)">詢價已收到,我們將在 24 小時內回覆。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="shell-footer"></div>
+
+<script src="/assets/site-shell.js?v=2"></script>
+<script>renderShell('contact');</script>
+</body>
+</html>

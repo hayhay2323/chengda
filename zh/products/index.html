@@ -1,18 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8" />
-<title>Products · Chengda</title>
+<title>產品 · 程達</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="canonical" href="https://www.gdchengda.hk/products/" />
-<link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/products/" />
-<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/products/" />
-<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/products/" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://www.gdchengda.hk/zh/products/" />
+<link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/products/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/products/" />
+<link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/products/" />
 <link rel="stylesheet" href="/assets/porcelain.css?v=2" />
 <style>
+  body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
   .layout { display: grid; grid-template-columns: 260px 1fr; gap: 64px; }
   @media (max-width: 980px) { .layout { grid-template-columns: 1fr; } .cat-side { position: static !important; } }
   .cat-side { position: sticky; top: 96px; align-self: start; }
@@ -71,8 +72,8 @@
 
 <section class="subpage-hero">
   <div class="wrap">
-    <div class="crumbs"><a href="/">Home</a><span class="sep">/</span><span>Products</span></div>
-    <h1 id="catTitle">Products.</h1>
+    <div class="crumbs"><a href="/zh/">首頁</a><span class="sep">/</span><span>產品</span></div>
+    <h1 id="catTitle">產品。</h1>
     <div class="sub" id="catSub"></div>
   </div>
 </section>
@@ -82,10 +83,10 @@
     <div class="layout">
       <aside class="cat-side">
         <ul class="cat-list" id="catList">
-          <li><a data-cat="washbasin" href="?cat=washbasin">Washbasin <span class="n">60+</span></a></li>
-          <li><a data-cat="pedestal" href="?cat=pedestal">Pedestal <span class="n">12</span></a></li>
-          <li><a data-cat="standard" href="?cat=standard">Toilet <span class="n">15</span></a></li>
-          <li><a data-cat="smart" href="?cat=smart">Smart Toilet <span class="n">06</span></a></li>
+          <li><a data-cat="washbasin" href="?cat=washbasin">面盆 <span class="n">60+</span></a></li>
+          <li><a data-cat="pedestal" href="?cat=pedestal">柱盆 <span class="n">12</span></a></li>
+          <li><a data-cat="standard" href="?cat=standard">馬桶 <span class="n">15</span></a></li>
+          <li><a data-cat="smart" href="?cat=smart">智能馬桶 <span class="n">06</span></a></li>
         </ul>
       </aside>
       <div>
@@ -104,17 +105,17 @@
 renderShell('products');
 const ICONS = window.CHENGDA_ICONS || {};
 const CATS = {
-  washbasin: { title:'Washbasin.', sub:['60+ models','Above · Semi · Under','CUPC certified'], icon:'washbasin',
-    tabs:[{id:'all',label:'All',count:18},{id:'above',label:'Above-counter',count:8},{id:'semi',label:'Semi-recessed',count:4},{id:'under',label:'Undercounter',count:6}],
+  washbasin: { title:'面盆。', sub:['60+ 款式','上嵌式 · 半嵌式 · 下嵌式','CUPC 認證'], icon:'washbasin',
+    tabs:[{id:'all',label:'全部',count:18},{id:'above',label:'上嵌',count:8},{id:'semi',label:'半嵌',count:4},{id:'under',label:'下嵌',count:6}],
     items:[{code:'A101',name:'Lumen Round',dims:'Ø410 × 145',sub:'above'},{code:'A108',name:'Volt Oval',dims:'600 × 380',sub:'above'},{code:'A115',name:'Mira Square',dims:'420 × 420',sub:'above'},{code:'A122',name:'Aria Vessel',dims:'Ø465 × 130',sub:'above'},{code:'A130',name:'Stone Counter',dims:'500 × 360',sub:'above'},{code:'A138',name:'Crest Boat',dims:'550 × 360',sub:'above'},{code:'A144',name:'Solis Round',dims:'Ø395 × 135',sub:'above'},{code:'A152',name:'Note Wide',dims:'700 × 380',sub:'above'},{code:'M201',name:'Calm Inset',dims:'560 × 410',sub:'semi'},{code:'M208',name:'Bay Inset',dims:'580 × 420',sub:'semi'},{code:'M214',name:'Riva Inset',dims:'600 × 430',sub:'semi'},{code:'M220',name:'Lina Inset',dims:'500 × 380',sub:'semi'},{code:'U301',name:'Vault Under',dims:'480 × 360',sub:'under'},{code:'U307',name:'Cove Under',dims:'500 × 380',sub:'under'},{code:'U312',name:'Quay Under',dims:'530 × 400',sub:'under'},{code:'U318',name:'Halo Under',dims:'Ø420',sub:'under'},{code:'U324',name:'Drift Under',dims:'480 × 340',sub:'under'},{code:'U330',name:'Plinth Under',dims:'520 × 380',sub:'under'}]},
-  pedestal: { title:'Pedestal.', sub:['12 models','Floor & Wall-Hung'], icon:'pedestal',
-    tabs:[{id:'all',label:'All',count:12},{id:'floor',label:'Floor',count:7},{id:'wall',label:'Wall-Hung',count:5}],
+  pedestal: { title:'柱盆。', sub:['12 款式','落地式 · 掛牆式'], icon:'pedestal',
+    tabs:[{id:'all',label:'全部',count:12},{id:'floor',label:'落地',count:7},{id:'wall',label:'掛牆',count:5}],
     items:[{code:'PB101',name:'Classic Pillar',dims:'560 × 460 × 850',sub:'floor'},{code:'PB108',name:'Slim Column',dims:'520 × 440 × 840',sub:'floor'},{code:'PB115',name:'Atelier',dims:'600 × 480 × 850',sub:'floor'},{code:'PB122',name:'Forma',dims:'550 × 450 × 845',sub:'floor'},{code:'PB130',name:'Lirio',dims:'580 × 460 × 850',sub:'floor'},{code:'PB144',name:'Toro',dims:'610 × 470 × 855',sub:'floor'},{code:'PB158',name:'Mira Column',dims:'590 × 460 × 850',sub:'floor'},{code:'WB101',name:'Float Wall',dims:'500 × 420',sub:'wall'},{code:'WB103',name:'Linea Wall',dims:'550 × 440',sub:'wall'},{code:'WB105',name:'Plate Wall',dims:'600 × 460',sub:'wall'},{code:'WB107',name:'Edge Wall',dims:'480 × 380',sub:'wall'},{code:'WB108',name:'Crest Wall',dims:'520 × 400',sub:'wall'}]},
-  standard: { title:'Toilet.', sub:['15 models · One-piece','Floor-mount · Dual flush','Antibacterial glaze · Soft-close seat'], icon:'toilet',
-    tabs:[{id:'all',label:'All',count:15},{id:'open',label:'Open tank',count:12},{id:'concealed',label:'Concealed cistern',count:3}],
-    items:[{code:"T201",name:"T201 · Cascade siphon · curved one-piece",dims:"690 × 375 × 660 mm",sub:"open",img:'/assets/products/' + "T201" + '/card.webp'},{code:"T202",name:"T202 · Cascade vortex · narrow footprint",dims:"680 × 360 × 700 mm",sub:"open",img:'/assets/products/' + "T202" + '/card.webp'},{code:"T203",name:"T203 · Rimless · fully glazed bowl",dims:"660 × 370 × 700 mm",sub:"open",img:'/assets/products/' + "T203" + '/card.webp'},{code:"T204",name:"T204 · Concealed cistern · 650 mm low silhouette",dims:"700 × 365 × 650 mm",sub:"concealed",img:'/assets/products/' + "T204" + '/card.webp'},{code:"T205",name:"T205 · Concealed cistern · soft-shoulder body",dims:"700 × 365 × 650 mm",sub:"concealed",img:'/assets/products/' + "T205" + '/card.webp'},{code:"T206",name:"T206 · Concealed cistern · squared shoulder",dims:"680 × 370 × 700 mm",sub:"concealed",img:'/assets/products/' + "T206" + '/card.webp'},{code:"T207",name:"T207 · Sculpted body · 430 mm seat width",dims:"680 × 430 × 680 mm",sub:"open",img:'/assets/products/' + "T207" + '/card.webp'},{code:"T208",name:"T208 · Soft-square one-piece",dims:"700 × 370 × 720 mm",sub:"open",img:'/assets/products/' + "T208" + '/card.webp'},{code:"T209",name:"T209 · Tall tank · super siphon",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T209" + '/card.webp'},{code:"T210",name:"T210 · Wide stance · 380 mm seat height",dims:"700 × 395 × 710 mm",sub:"open",img:'/assets/products/' + "T210" + '/card.webp'},{code:"T211",name:"T211 · Tall tank · soft cylinder",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T211" + '/card.webp'},{code:"T212",name:"T212 · Tall tank · squared shoulder",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T212" + '/card.webp'},{code:"T213",name:"T213 · Tall tank · slim profile",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T213" + '/card.webp'},{code:"T214",name:"T214 · Tall tank · architectural",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T214" + '/card.webp'},{code:"T215",name:"T215 · Flagship 760 mm tank",dims:"680 × 365 × 760 mm",sub:"open",img:'/assets/products/' + "T215" + '/card.webp'}]},
-  smart: { title:'Smart Toilet.', sub:['New series','Heated seat · Auto flush'], icon:'smarttoilet',
-    tabs:[{id:'all',label:'All',count:6},{id:'floor',label:'Floor',count:3},{id:'wall',label:'Wall-Hung',count:3}],
+  standard: { title:'馬桶。', sub:['15 款式 · 連體','落地式 · 雙鈕沖水','抗菌釉面 · 緩降座圈'], icon:'toilet',
+    tabs:[{id:'all',label:'全部',count:15},{id:'open',label:'外置水箱',count:12},{id:'concealed',label:'隱藏水箱',count:3}],
+    items:[{code:"T201",name:"T201 · 瀑布虹吸 · 弧線一體",dims:"690 × 375 × 660 mm",sub:"open",img:'/assets/products/' + "T201" + '/card.webp'},{code:"T202",name:"T202 · 瀑布超漩 · 窄底盤",dims:"680 × 360 × 700 mm",sub:"open",img:'/assets/products/' + "T202" + '/card.webp'},{code:"T203",name:"T203 · 無唇 · 全釉內壁",dims:"660 × 370 × 700 mm",sub:"open",img:'/assets/products/' + "T203" + '/card.webp'},{code:"T204",name:"T204 · 隱藏水箱 · 650mm 低姿態",dims:"700 × 365 × 650 mm",sub:"concealed",img:'/assets/products/' + "T204" + '/card.webp'},{code:"T205",name:"T205 · 隱藏水箱 · 軟肩身型",dims:"700 × 365 × 650 mm",sub:"concealed",img:'/assets/products/' + "T205" + '/card.webp'},{code:"T206",name:"T206 · 隱藏水箱 · 方肩",dims:"680 × 370 × 700 mm",sub:"concealed",img:'/assets/products/' + "T206" + '/card.webp'},{code:"T207",name:"T207 · 雕塑身型 · 430mm 寬座圈",dims:"680 × 430 × 680 mm",sub:"open",img:'/assets/products/' + "T207" + '/card.webp'},{code:"T208",name:"T208 · 軟方一體",dims:"700 × 370 × 720 mm",sub:"open",img:'/assets/products/' + "T208" + '/card.webp'},{code:"T209",name:"T209 · 高水箱 · 超漩虹吸",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T209" + '/card.webp'},{code:"T210",name:"T210 · 寬底盤 · 380mm 坐高",dims:"700 × 395 × 710 mm",sub:"open",img:'/assets/products/' + "T210" + '/card.webp'},{code:"T211",name:"T211 · 高水箱 · 軟柱身",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T211" + '/card.webp'},{code:"T212",name:"T212 · 高水箱 · 方肩",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T212" + '/card.webp'},{code:"T213",name:"T213 · 高水箱 · 修長",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T213" + '/card.webp'},{code:"T214",name:"T214 · 高水箱 · 建築感",dims:"680 × 365 × 750 mm",sub:"open",img:'/assets/products/' + "T214" + '/card.webp'},{code:"T215",name:"T215 · 旗艦 760mm 水箱",dims:"680 × 365 × 760 mm",sub:"open",img:'/assets/products/' + "T215" + '/card.webp'}]},
+  smart: { title:'智能馬桶。', sub:['新系列','加熱坐圈 · 自動沖水'], icon:'smarttoilet',
+    tabs:[{id:'all',label:'全部',count:6},{id:'floor',label:'落地',count:3},{id:'wall',label:'掛牆',count:3}],
     items:[{code:'ST101',name:'Lumen Smart',dims:'720 × 400 × 480',sub:'floor'},{code:'ST108',name:'Volt Smart',dims:'700 × 390 × 470',sub:'floor'},{code:'ST115',name:'Aria Smart',dims:'710 × 395 × 475',sub:'floor'},{code:'SW201',name:'Float Smart',dims:'540 × 360 × 320',sub:'wall'},{code:'SW208',name:'Edge Smart',dims:'560 × 370 × 330',sub:'wall'},{code:'SW214',name:'Plate Smart',dims:'550 × 365 × 325',sub:'wall'}]},
 };
 const params = new URLSearchParams(location.search);

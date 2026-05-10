@@ -14,7 +14,7 @@
   --t: cubic-bezier(.4,.0,.2,1);
   --r-sm: 10px;
   --r-md: 18px;
-  --r-lg: 28px;
+  --r-lg: 32px;
   --r-xl: 40px;
   --r-pill: 999px;
   --font: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif;
@@ -98,6 +98,18 @@ img, svg { display: block; max-width: 100%; }
   transition: all 0.2s var(--t);
 }
 .nav-cta:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
+.lang-switch {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  padding: 8px 10px;
+  margin-right: 8px;
+  border-radius: var(--r-pill);
+  transition: color 0.15s var(--t), background 0.15s var(--t);
+}
+.lang-switch:hover { color: var(--ink); background: var(--bg-2); }
 .nav-burger {
   display: none;
   width: 32px; height: 32px;

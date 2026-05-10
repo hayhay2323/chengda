@@ -1,62 +1,87 @@
-// Shared nav + footer renderer for porcelain site
+// Shared nav + footer renderer for porcelain site (en + zh-Hant)
 (function(){
+  const ZH = location.pathname.startsWith('/zh/') || location.pathname === '/zh';
+  const P = ZH ? '/zh' : '';
+
+  const L = ZH ? {
+    home:'首頁', about:'關於', products:'產品', oem:'OEM', blog:'文章', contact:'聯絡',
+    cta:'索取報價', langSwitch:'EN', altPath: location.pathname.replace(/^\/zh/, '') || '/',
+    footerTag:'瓷器衛浴，以瓷塑形。潮州，自 1999。',
+    fProducts:'產品', fCompany:'公司', fContact:'聯絡',
+    fWashbasin:'面盆', fPedestal:'柱盆', fToilet:'馬桶', fSmart:'智能馬桶',
+    fOem:'OEM / ODM', fHours:'',
+    copyr:'© 2026 廣東程達智能科技有限公司', addr:'潮州 · 廣東 · 中國'
+  } : {
+    home:'Home', about:'About', products:'Products', oem:'OEM', blog:'Blog', contact:'Contact',
+    cta:'Get a quote →', langSwitch:'繁', altPath: '/zh' + (location.pathname === '/' ? '/' : location.pathname),
+    footerTag:'Vitreous china sanitaryware, shaped in porcelain. Made in Chaozhou since 1999.',
+    fProducts:'Products', fCompany:'Company', fContact:'Contact',
+    fWashbasin:'Washbasin', fPedestal:'Pedestal', fToilet:'Toilet', fSmart:'Smart Toilet',
+    fOem:'OEM &amp; ODM', fHours:'',
+    copyr:'© 2026 Guangdong Chengda Intelligent Tech.', addr:'Chaozhou · Guangdong · China'
+  };
+
   const NAV = (active) => `
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="/" class="brand">Chengda</a>
+    <a href="${P}/" class="brand">Chengda</a>
     <nav class="nav-menu">
-      <a href="/"${active==='home'?' class="active"':''}>Home</a>
-      <a href="/about/"${active==='about'?' class="active"':''}>About</a>
-      <a href="/products/"${active==='products'?' class="active"':''}>Products</a>
-      <a href="/oem/"${active==='oem'?' class="active"':''}>OEM</a>
-      <a href="/blog/"${active==='blog'?' class="active"':''}>Blog</a>
-      <a href="/contact/"${active==='contact'?' class="active"':''}>Contact</a>
+      <a href="${P}/"${active==='home'?' class="active"':''}>${L.home}</a>
+      <a href="${P}/about/"${active==='about'?' class="active"':''}>${L.about}</a>
+      <a href="${P}/products/"${active==='products'?' class="active"':''}>${L.products}</a>
+      <a href="${P}/oem/"${active==='oem'?' class="active"':''}>${L.oem}</a>
+      <a href="${P}/blog/"${active==='blog'?' class="active"':''}>${L.blog}</a>
+      <a href="${P}/contact/"${active==='contact'?' class="active"':''}>${L.contact}</a>
     </nav>
-    <a href="/contact/" class="nav-cta">Get a quote →</a>
+    <a href="${L.altPath}" class="lang-switch" aria-label="Switch language">${L.langSwitch}</a>
+    <a href="${P}/contact/" class="nav-cta">${L.cta}</a>
     <button class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </header>
 <div class="nav-drawer" id="navDrawer">
-  <a href="/">Home</a>
-  <a href="/about/">About</a>
-  <a href="/products/">Products</a>
-  <a href="/oem/">OEM</a>
-  <a href="/blog/">Blog</a>
-  <a href="/contact/">Contact</a>
-  <a href="/contact/">Get a quote →</a>
+  <a href="${P}/">${L.home}</a>
+  <a href="${P}/about/">${L.about}</a>
+  <a href="${P}/products/">${L.products}</a>
+  <a href="${P}/oem/">${L.oem}</a>
+  <a href="${P}/blog/">${L.blog}</a>
+  <a href="${P}/contact/">${L.contact}</a>
+  <a href="${L.altPath}">${L.langSwitch}</a>
+  <a href="${P}/contact/">${L.cta}</a>
 </div>`;
+
   const FOOTER = `
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
       <div>
         <div class="footer-brand">Chengda</div>
-        <p class="footer-tag">Vitreous china sanitaryware, shaped in porcelain. Made in Chaozhou since 1999.</p>
+        <p class="footer-tag">${L.footerTag}</p>
       </div>
-      <div class="footer-col"><h4>Products</h4>
-        <a href="/products/?cat=washbasin">Washbasin</a>
-        <a href="/products/?cat=pedestal">Pedestal</a>
-        <a href="/products/?cat=standard">Toilet</a>
-        <a href="/products/?cat=smart">Smart Toilet</a>
+      <div class="footer-col"><h4>${L.fProducts}</h4>
+        <a href="${P}/products/?cat=washbasin">${L.fWashbasin}</a>
+        <a href="${P}/products/?cat=pedestal">${L.fPedestal}</a>
+        <a href="${P}/products/?cat=standard">${L.fToilet}</a>
+        <a href="${P}/products/?cat=smart">${L.fSmart}</a>
       </div>
-      <div class="footer-col"><h4>Company</h4>
-        <a href="/about/">About</a>
-        <a href="/oem/">OEM &amp; ODM</a>
-        <a href="/blog/">Blog</a>
-        <a href="/contact/">Contact</a>
+      <div class="footer-col"><h4>${L.fCompany}</h4>
+        <a href="${P}/about/">${L.about}</a>
+        <a href="${P}/oem/">${L.fOem}</a>
+        <a href="${P}/blog/">${L.blog}</a>
+        <a href="${P}/contact/">${L.contact}</a>
       </div>
-      <div class="footer-col"><h4>Contact</h4>
+      <div class="footer-col"><h4>${L.fContact}</h4>
         <a href="mailto:13829094740@163.com">13829094740@163.com</a>
         <a href="tel:+8613829094740">+86 138 2909 4740</a>
         <a href="#">WeChat: Chengda_koi888</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Guangdong Chengda Intelligent Tech.</span>
-      <span>Chaozhou · Guangdong · China</span>
+      <span>${L.copyr}</span>
+      <span>${L.addr}</span>
     </div>
   </div>
 </footer>`;
+
   window.renderShell = function(active){
     const n = document.getElementById('shell-nav');
     const f = document.getElementById('shell-footer');

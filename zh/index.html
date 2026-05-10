@@ -1,29 +1,22 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 <meta charset="utf-8" />
-<title>Chengda · Ceramic Sanitaryware</title>
+<title>程達 · 陶瓷衛浴</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="canonical" href="https://www.gdchengda.hk/" />
+<meta name="description" content="程達 — 玻化瓷衛浴。潮州精製,自 1999 年起。CUPC、ISO 9001。OEM/ODM,出口 50+ 國家。" />
+<link rel="canonical" href="https://www.gdchengda.hk/zh/" />
 <link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/" />
 <link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/" />
 <link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/" />
-<meta name="description" content="Chengda — vitreous china sanitaryware. Engineered in Chaozhou since 1999. CUPC, ISO 9001. OEM/ODM, 50+ countries." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/porcelain.css?v=2" />
 <style>
-  /* Hero — homepage only */
-  .hero {
-    padding: 128px 0 72px;
-    position: relative;
-    overflow: hidden;
-  }
+  .hero { padding: 128px 0 72px; position: relative; overflow: hidden; }
   .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
+    content: ''; position: absolute; inset: 0;
     background:
       radial-gradient(ellipse 80% 60% at 75% 30%, rgba(37,99,168,0.06) 0%, transparent 60%),
       radial-gradient(ellipse 60% 50% at 20% 80%, rgba(37,99,168,0.03) 0%, transparent 60%),
@@ -32,155 +25,128 @@
   }
   .hero .wrap { position: relative; }
   .hero-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--muted);
-    margin-bottom: clamp(40px, 6vh, 64px);
-    flex-wrap: wrap;
-    gap: 16px;
-    white-space: nowrap;
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted); margin-bottom: clamp(40px, 6vh, 64px);
+    flex-wrap: wrap; gap: 16px; white-space: nowrap;
   }
   .hero-meta .l { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
   .hero-meta .dot {
-    display: inline-block;
-    width: 6px; height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    margin-right: 8px;
-    box-shadow: 0 0 8px var(--accent);
+    display: inline-block; width: 6px; height: 6px;
+    background: var(--accent); border-radius: 50%;
+    margin-right: 8px; box-shadow: 0 0 8px var(--accent);
   }
   .hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: clamp(32px, 5vw, 80px);
-    align-items: center;
-    min-height: 60vh;
+    display: grid; grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(32px, 5vw, 80px); align-items: center; min-height: 60vh;
   }
   @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
   .hero h1 {
     font-size: clamp(44px, 7.4vw, 112px);
-    font-weight: 500;
-    line-height: 1.0;
-    letter-spacing: -0.045em;
+    font-weight: 500; line-height: 1.0; letter-spacing: -0.045em;
   }
   .hero h1 .soft { color: var(--muted); font-style: italic; font-weight: 400; }
-  .hero-sub {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-    align-items: flex-start;
-  }
-  .hero-sub p {
-    font-size: clamp(16px, 1.25vw, 18px);
-    color: var(--ink-2);
-    max-width: 44ch;
-    line-height: 1.55;
-  }
+  .hero-sub { margin-top: 40px; display: flex; flex-direction: column; gap: 28px; align-items: flex-start; }
+  .hero-sub p { font-size: clamp(16px, 1.25vw, 18px); color: var(--ink-2); max-width: 44ch; line-height: 1.7; }
   .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-
-  /* Stats sit just under hero */
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
+  /* zh-specific tweak — Noto Sans TC works best for body */
+  body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
 </style>
 </head>
 <body>
 
 <div id="shell-nav"></div>
 
-<!-- HERO -->
 <section class="hero">
   <div class="wrap">
     <div class="hero-meta mono">
       <div class="l">
-        <span><span class="dot"></span>Chaozhou · GD</span>
-        <span>Est. 1999</span>
+        <span><span class="dot"></span>潮州 · 廣東</span>
+        <span>成立 1999</span>
       </div>
       <div class="r">CUPC · ISO 9001</div>
     </div>
 
     <div class="hero-grid">
       <div>
-        <h1>Sanitaryware,<br/><span class="soft">shaped in porcelain.</span></h1>
+        <h1>衛浴瓷器,<br/><span class="soft">以瓷塑形。</span></h1>
         <div class="hero-sub">
-          <p>Vitreous china washbasins, pedestals and toilets — fired at 1,250&nbsp;°C in one Chaozhou facility. OEM &amp; ODM for partners in 50+ countries.</p>
+          <p>玻化瓷面盆、柱盆、馬桶 — 潮州單一工廠,1,250&nbsp;°C 高溫燒製。OEM/ODM 服務 50+ 國家合作夥伴。</p>
           <div class="actions">
-            <a href="/products/" class="btn primary"><span>See products</span> <span class="arr"></span></a>
-            <a href="/contact/" class="btn">Get a quote</a>
+            <a href="/zh/products/" class="btn primary"><span>看產品</span> <span class="arr"></span></a>
+            <a href="/zh/contact/" class="btn">索取報價</a>
           </div>
         </div>
       </div>
       <div class="porcelain-frame">
-        <span class="badge mono"><span class="dot"></span>In production</span>
+        <span class="badge mono"><span class="dot"></span>生產中</span>
         <span id="hero-ico"></span>
         <div class="tag mono">
-          <span>Reference</span>
-          <span class="v">WB‑101 · Vitreous China</span>
+          <span>型號參考</span>
+          <span class="v">WB‑101 · 玻化瓷</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STATS -->
 <section class="wrap stats-section">
   <div class="stats">
     <div class="cell">
-      <div class="k">Operating since</div>
+      <div class="k">成立年份</div>
       <div class="v">1999</div>
     </div>
     <div class="cell">
-      <div class="k">Models</div>
+      <div class="k">型號數</div>
       <div class="v">200<sup>+</sup></div>
     </div>
     <div class="cell">
-      <div class="k">Export markets</div>
+      <div class="k">外銷市場</div>
       <div class="v">50<sup>+</sup></div>
     </div>
     <div class="cell">
-      <div class="k">Vitrification</div>
+      <div class="k">燒結溫度</div>
       <div class="v">1,250<sup>°C</sup></div>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS -->
 <section class="section">
   <div class="wrap">
     <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
       <div>
-        <div class="eyebrow">Products</div>
-        <h2 style="margin-top:8px">Four <span class="soft">platforms.</span></h2>
+        <div class="eyebrow">產品</div>
+        <h2 style="margin-top:8px">四大 <span class="soft">產品線。</span></h2>
       </div>
-      <a class="more-link" href="/products/">Full catalog →</a>
+      <a class="more-link" href="/zh/products/">完整目錄 →</a>
     </div>
 
     <div class="card-grid">
-      <a class="p-card" href="/products/?cat=washbasin">
+      <a class="p-card" href="/zh/products/?cat=washbasin">
         <div class="img"><span id="ico-washbasin"></span></div>
         <div class="meta">
-          <div class="name">Washbasin</div>
+          <div class="name">面盆</div>
           <div class="idx">01 / 04</div>
         </div>
       </a>
-      <a class="p-card" href="/products/?cat=pedestal">
+      <a class="p-card" href="/zh/products/?cat=pedestal">
         <div class="img"><span id="ico-pedestal"></span></div>
         <div class="meta">
-          <div class="name">Pedestal</div>
+          <div class="name">柱盆</div>
           <div class="idx">02 / 04</div>
         </div>
       </a>
-      <a class="p-card" href="/products/?cat=standard">
-        <div class="img"><img src="/assets/products/T201/card.webp" alt="Chengda toilet — T201" loading="lazy" decoding="async" style="width:78%;height:78%;object-fit:contain" /></div>
+      <a class="p-card" href="/zh/products/?cat=standard">
+        <div class="img"><img src="/assets/products/T201/card.webp" alt="程達馬桶 — T201" loading="lazy" decoding="async" style="width:78%;height:78%;object-fit:contain" /></div>
         <div class="meta">
-          <div class="name">Toilet</div>
+          <div class="name">馬桶</div>
           <div class="idx">03 / 04</div>
         </div>
       </a>
-      <a class="p-card" href="/products/?cat=smart">
+      <a class="p-card" href="/zh/products/?cat=smart">
         <div class="img"><span id="ico-smart"></span></div>
         <div class="meta">
-          <div class="name">Smart Toilet</div>
+          <div class="name">智能馬桶</div>
           <div class="idx">04 / 04</div>
         </div>
       </a>
@@ -188,7 +154,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6"></script>
