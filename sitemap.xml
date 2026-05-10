@@ -1,39 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/0.9">
   <url>
     <loc>https://www.gdchengda.hk/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/products/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/about/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/oem/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/contact/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/blog/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T201/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T201/hero.webp</image:loc>
+      <image:title>Chengda T201 — Cascade siphon one-piece ceramic toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T202/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T202/hero.webp</image:loc>
+      <image:title>Chengda T202 — Cascade vortex narrow-footprint toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T203/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T203/hero.webp</image:loc>
+      <image:title>Chengda T203 — Rimless vortex one-piece toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T204/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T204/hero.webp</image:loc>
+      <image:title>Chengda T204 — Concealed cistern 650 mm low-profile toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T205/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T205/hero.webp</image:loc>
+      <image:title>Chengda T205 — Concealed cistern soft-shoulder toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T206/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T206/hero.webp</image:loc>
+      <image:title>Chengda T206 — Concealed cistern squared-shoulder toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T207/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T207/hero.webp</image:loc>
+      <image:title>Chengda T207 — Sculpted-body 430 mm one-piece toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T208/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T208/hero.webp</image:loc>
+      <image:title>Chengda T208 — Soft-square one-piece toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T209/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T209/hero.webp</image:loc>
+      <image:title>Chengda T209 — Tall tank super siphon toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T210/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T210/hero.webp</image:loc>
+      <image:title>Chengda T210 — Wide-stance 380 mm seat-height toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T211/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T211/hero.webp</image:loc>
+      <image:title>Chengda T211 — Tall tank soft-cylinder toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T212/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T212/hero.webp</image:loc>
+      <image:title>Chengda T212 — Tall tank squared-shoulder toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T213/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T213/hero.webp</image:loc>
+      <image:title>Chengda T213 — Tall tank slim-profile toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T214/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T214/hero.webp</image:loc>
+      <image:title>Chengda T214 — Tall tank architectural toilet</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.gdchengda.hk/products/T215/</loc>
+    <lastmod>2026-05-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.gdchengda.hk/assets/products/T215/hero.webp</image:loc>
+      <image:title>Chengda T215 — Flagship 760 mm one-piece toilet</image:title>
+    </image:image>
   </url>
 </urlset>
