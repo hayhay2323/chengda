@@ -64,6 +64,8 @@
   .hero-sub p { font-size: clamp(16px, 1.25vw, 18px); color: var(--ink-2); max-width: 44ch; line-height: 1.7; }
   .actions { display: flex; gap: 12px; flex-wrap: wrap; }
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
+  .hero-meta .r { display: flex; gap: 8px; align-items: center; }
+  .cert-chip { display: inline-flex; align-items: center; background: var(--ink); color: #fff; padding: 6px 12px; border-radius: 999px; font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; }
   /* zh-specific tweak — Noto Sans TC works best for body */
   body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
 </style>
@@ -79,7 +81,7 @@
         <span><span class="dot"></span>潮州 · 廣東</span>
         <span>成立 1999</span>
       </div>
-      <div class="r">CUPC · ISO 9001</div>
+      <div class="r"><span class="cert-chip">CUPC</span><span class="cert-chip">ISO 9001</span></div>
     </div>
 
     <div class="hero-grid">

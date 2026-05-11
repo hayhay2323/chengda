@@ -98,6 +98,16 @@
   /* Stats sit just under hero */
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
 
+  /* Hero meta certs as black pill chips */
+  .hero-meta .r { display: flex; gap: 8px; align-items: center; }
+  .cert-chip {
+    display: inline-flex; align-items: center;
+    background: var(--ink); color: #fff;
+    padding: 6px 12px; border-radius: 999px;
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+
   /* Buyer FAQ — sits between products and blog teaser */
   .home-faq .hf-grid {
     border-radius: 24px; overflow: hidden; background: var(--line, #E8E9EB);
@@ -151,7 +161,7 @@
         <span><span class="dot"></span>Chaozhou · GD</span>
         <span>Est. 1999</span>
       </div>
-      <div class="r">CUPC · ISO 9001</div>
+      <div class="r"><span class="cert-chip">CUPC</span><span class="cert-chip">ISO 9001</span></div>
     </div>
 
     <div class="hero-grid">
