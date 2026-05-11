@@ -339,48 +339,31 @@ img, svg { display: block; max-width: 100%; }
 .porcelain-frame {
   position: relative;
   aspect-ratio: 4 / 5;
-  /* match the studio gradient in the photograph so the photo's
-     edges dissolve into the container — no more nested rectangles */
-  background: radial-gradient(ellipse 90% 70% at 55% 35%, #F2F3F4 0%, #E2E3E5 72%, #D6D8DA 100%);
-  border-radius: var(--r-xl);
+  /* No container box — photo floats directly on the page.
+     The studio gradient in the photo fades to page-bg via a soft
+     mask so there's no visible photo edge anywhere. */
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
   display: flex; align-items: center; justify-content: center;
-  overflow: hidden;
-  box-shadow: 0 30px 60px -32px rgba(20,23,27,0.10);
+  overflow: visible;
 }
-.porcelain-frame::before {
-  /* highlight removed — was creating an extra visible artefact on the matching bg */
-  content: none;
-}
-.porcelain-frame svg {
-  width: 70%; height: 70%;
-  opacity: 0.9;
-}
+.porcelain-frame::before { content: none; }
+.porcelain-frame svg { width: 70%; height: 70%; opacity: 0.9; }
 .porcelain-frame img {
   width: 100%; height: 100%;
   object-fit: contain;
   position: relative; z-index: 1;
+  /* Feather the photo's edges into the page background.
+     The radial mask keeps the toilet (slightly off-center, lower)
+     fully opaque while bg gray at edges fades to nothing. */
+  -webkit-mask-image: radial-gradient(ellipse 78% 90% at 52% 58%, #000 55%, transparent 100%);
+          mask-image: radial-gradient(ellipse 78% 90% at 52% 58%, #000 55%, transparent 100%);
 }
-.porcelain-frame .badge {
-  position: absolute; top: 18px; left: 18px; z-index: 2;
-  display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(255,255,255,0.7); backdrop-filter: blur(10px);
-  border-radius: var(--r-pill);
-  padding: 5px 11px;
-  font-size: 10px; color: var(--ink-2); letter-spacing: 0.08em;
-}
-.porcelain-frame .badge .dot {
-  width: 4px; height: 4px;
-  background: var(--ink); border-radius: 50%;
-  box-shadow: none;
-}
-.porcelain-frame .tag {
-  position: absolute; bottom: 18px; left: 20px; right: 20px; z-index: 2;
-  display: flex; justify-content: space-between;
-  font-size: 10px; color: var(--ink-2); letter-spacing: 0.08em;
-  background: transparent;
-  padding: 0;
-}
-.porcelain-frame .tag .v { color: var(--ink); }
+/* Badge + tag dropped from hero — were a card-y artefact of the old frame.
+   Catalogue reference now lives in the type column as plain caption. */
+.porcelain-frame .badge,
+.porcelain-frame .tag { display: none; }
 .porcelain-frame .tag .v { color: var(--ink-2); }
 
 /* ============ Data rows (specs, contact info) ============ */
