@@ -283,7 +283,7 @@ img, svg { display: block; max-width: 100%; }
 @media (max-width: 600px)  { .card-grid { grid-template-columns: 1fr; } }
 .p-card {
   background: var(--bg-2);
-  border-radius: var(--r-xl);
+  border-radius: var(--r-lg);
   display: flex;
   flex-direction: column;
   cursor: pointer;
