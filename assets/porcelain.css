@@ -225,7 +225,7 @@ img, svg { display: block; max-width: 100%; }
   letter-spacing: -0.04em;
   line-height: 1.05;
 }
-.section-head h2 .soft { color: var(--muted); font-style: italic; font-weight: 400; }
+.section-head h2 .soft { color: var(--muted); font-style: italic; font-weight: 400; font-family: 'Newsreader', 'Inter', serif; letter-spacing: -0.005em; }
 .section-head p {
   margin-top: 14px;
   font-size: 16px;
@@ -256,7 +256,7 @@ img, svg { display: block; max-width: 100%; }
   line-height: 1;
   margin-bottom: 18px;
 }
-.subpage-hero h1 .soft { color: var(--muted); font-style: italic; font-weight: 400; }
+.subpage-hero h1 .soft { color: var(--muted); font-style: italic; font-weight: 400; font-family: 'Newsreader', 'Inter', serif; letter-spacing: -0.005em; }
 .subpage-hero .crumbs {
   display: flex; gap: 10px; align-items: center;
   font-family: var(--font-mono); font-size: 11px;
