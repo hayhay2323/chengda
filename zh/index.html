@@ -169,6 +169,41 @@
   </div>
 </section>
 
+<section class="section home-faq">
+  <div class="wrap">
+    <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
+      <div>
+        <div class="eyebrow">採購買家 · 快速答覆</div>
+        <h2 style="margin-top:8px">採購 <span class="soft">常見問題。</span></h2>
+      </div>
+      <a class="more-link" href="/zh/products/#faq">所有採購問題 →</a>
+    </div>
+
+    <div class="hf-grid">
+      <div class="hf-row">
+        <div class="hf-q"><div class="n mono">01</div><h3>最少訂購量(MOQ)?</h3></div>
+        <div class="hf-a">標準型每款 <strong>100 件</strong>;OEM 定製從 <strong>200 件</strong> 起。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n mono">02</div><h3>交期多久?</h3></div>
+        <div class="hf-a">標準款付款後 <strong>45–60 天</strong>;OEM 開模另加 15–30 天。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n mono">03</div><h3>有什麼認證?</h3></div>
+        <div class="hf-a">廠內 <strong>CUPC</strong>(北美)、<strong>ISO 9001</strong>。OEM 案可申請 WaterMark、CE、SASO。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n mono">04</div><h3>可以定製形狀、尺寸、品牌?</h3></div>
+        <div class="hf-a">可以 — 全 OEM/ODM。開模費 <strong>USD 3,000+</strong>,模具歸客戶。開模前先 3D 圖確認。</div>
+      </div>
+      <div class="hf-row">
+        <div class="hf-q"><div class="n mono">05</div><h3>付款方式?</h3></div>
+        <div class="hf-a"><strong>T/T 30/70</strong>(30% 訂金,70% 見提單副本);USD 50K 以上可接受即期 L/C。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section blog-teaser">
   <div class="wrap">
     <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
@@ -205,6 +240,14 @@
 </section>
 
 <style>
+  .home-faq .hf-grid { border-radius: 24px; overflow: hidden; background: var(--line, #E8E9EB); display: flex; flex-direction: column; gap: 1px; }
+  .hf-row { background: #ffffff; display: grid; grid-template-columns: 320px 1fr; gap: 48px; padding: 28px 32px; }
+  @media (max-width: 760px) { .hf-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 24px 28px; } }
+  .hf-q { display: flex; flex-direction: column; gap: 4px; }
+  .hf-q .n { font-size: 11px; letter-spacing: 0.14em; color: var(--muted); }
+  .hf-q h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; color: var(--ink); margin: 0; }
+  .hf-a { font-size: 15px; line-height: 1.65; color: var(--ink-2); }
+  .hf-a strong { color: var(--ink); font-weight: 600; }
   .blog-teaser .bt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
   @media (max-width: 1024px) { .blog-teaser .bt-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 560px)  { .blog-teaser .bt-grid { grid-template-columns: 1fr; } }
@@ -235,14 +278,51 @@ place('ico-smart', 'smarttoilet');
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "@id": "https://www.gdchengda.hk/zh/#webpage",
-  "url": "https://www.gdchengda.hk/zh/",
-  "name": "程達 · 陶瓷衛浴",
-  "isPartOf": {"@id": "https://www.gdchengda.hk/#website"},
-  "about": {"@id": "https://www.gdchengda.hk/#organization"},
-  "primaryImageOfPage": "https://www.gdchengda.hk/assets/og-home.webp",
-  "inLanguage": "zh-Hant"
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://www.gdchengda.hk/zh/#webpage",
+      "url": "https://www.gdchengda.hk/zh/",
+      "name": "程達 · 陶瓷衛浴",
+      "isPartOf": {"@id": "https://www.gdchengda.hk/#website"},
+      "about": {"@id": "https://www.gdchengda.hk/#organization"},
+      "primaryImageOfPage": "https://www.gdchengda.hk/assets/og-home.webp",
+      "inLanguage": "zh-Hant"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.gdchengda.hk/zh/#faq",
+      "isPartOf": {"@id": "https://www.gdchengda.hk/zh/#webpage"},
+      "inLanguage": "zh-Hant",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "程達陶瓷衛浴的最少訂購量(MOQ)是多少?",
+          "acceptedAnswer": {"@type": "Answer", "text": "標準型每款 100 件;OEM 定製從 200 件起。"}
+        },
+        {
+          "@type": "Question",
+          "name": "生產交期多久?",
+          "acceptedAnswer": {"@type": "Answer", "text": "標準款付款後 45–60 天;OEM 開模另加 15–30 天。"}
+        },
+        {
+          "@type": "Question",
+          "name": "程達持有哪些認證?",
+          "acceptedAnswer": {"@type": "Answer", "text": "廠內 CUPC(北美)、ISO 9001。OEM 案可申請 WaterMark、CE、SASO。"}
+        },
+        {
+          "@type": "Question",
+          "name": "可以定製形狀、尺寸、品牌嗎(OEM/ODM)?",
+          "acceptedAnswer": {"@type": "Answer", "text": "可以 — 全 OEM/ODM。開模費 USD 3,000+,模具歸客戶。開模前先 3D 圖確認。"}
+        },
+        {
+          "@type": "Question",
+          "name": "付款方式是什麼?",
+          "acceptedAnswer": {"@type": "Answer", "text": "T/T 30/70(30% 訂金,70% 見提單副本);USD 50K 以上可接受即期 L/C。"}
+        }
+      ]
+    }
+  ]
 }
 </script>
 </body>
