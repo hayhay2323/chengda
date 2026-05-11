@@ -141,8 +141,8 @@ function render() {
       : (ICONS[C.icon]||'');
     return `
     <a class="pcard" href="${href}">
-      <div class="img"><span class="code-tag">${it.code}</span>${visual}</div>
-      <div class="info"><div class="code">${it.code}</div><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div>
+      <div class="img">${visual}</div>
+      <div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div>
     </a>`;
   }).join('');
 }
