@@ -169,6 +169,56 @@
   </div>
 </section>
 
+<section class="section blog-teaser">
+  <div class="wrap">
+    <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
+      <div>
+        <div class="eyebrow">部落格 · 工藝筆記</div>
+        <h2 style="margin-top:8px">最新 <span class="soft">出窯。</span></h2>
+      </div>
+      <a class="more-link" href="/zh/blog/">所有文章 →</a>
+    </div>
+
+    <div class="bt-grid">
+      <a class="bt-card" href="/zh/blog/raw-material/">
+        <div class="tag mono">01 · 工藝</div>
+        <h3>原料與泥漿 — 一個陶瓷品的「出生起點」</h3>
+        <div class="read mono">5 分鐘 · 简体中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/sink-types/">
+        <div class="tag mono">02 · 選購指南</div>
+        <h3>台上盆 vs 台下盆 vs 台中盆:到底有什麼區別?</h3>
+        <div class="read mono">4 分鐘 · 简体中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/art-basin/">
+        <div class="tag mono">03 · 設計趨勢</div>
+        <h3>藝術盆是什麼?為什麼越來越多人選?</h3>
+        <div class="read mono">6 分鐘 · 简体中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/art-basin-buying/">
+        <div class="tag mono">04 · 選購指南</div>
+        <h3>藝術盆有什麼缺點?適配對象?選購建議</h3>
+        <div class="read mono">7 分鐘 · 简体中文 →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .blog-teaser .bt-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  @media (max-width: 1024px) { .blog-teaser .bt-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px)  { .blog-teaser .bt-grid { grid-template-columns: 1fr; } }
+  .bt-card {
+    background: var(--bg-2); border-radius: 24px; padding: 26px 26px 30px;
+    text-decoration: none; display: flex; flex-direction: column;
+    min-height: 200px; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
+  }
+  .bt-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.16); }
+  .bt-card .tag { font-size: 11px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 18px; }
+  .bt-card h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.4; color: var(--ink); margin: 0; }
+  .bt-card .read { margin-top: auto; padding-top: 24px; font-size: 11px; letter-spacing: 0.12em; color: var(--ink); }
+</style>
+
 <div id="shell-footer"></div>
 
 <script src="/assets/icons.js?v=6"></script>

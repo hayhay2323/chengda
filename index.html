@@ -97,6 +97,28 @@
 
   /* Stats sit just under hero */
   .stats-section { padding-bottom: clamp(40px, 6vh, 72px); }
+
+  /* Blog teaser — sits before footer */
+  .blog-teaser .bt-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+  }
+  @media (max-width: 1024px) { .blog-teaser .bt-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px)  { .blog-teaser .bt-grid { grid-template-columns: 1fr; } }
+  .bt-card {
+    background: var(--bg-2); border-radius: 24px; padding: 26px 26px 30px;
+    text-decoration: none; display: flex; flex-direction: column;
+    min-height: 200px; transition: transform 0.4s var(--t), box-shadow 0.4s var(--t);
+  }
+  .bt-card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(20,23,27,0.16); }
+  .bt-card .tag { font-size: 11px; letter-spacing: 0.14em; color: var(--muted); margin-bottom: 18px; }
+  .bt-card h3 {
+    font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.35;
+    color: var(--ink); margin: 0;
+  }
+  .bt-card .read {
+    margin-top: auto; padding-top: 24px;
+    font-size: 11px; letter-spacing: 0.12em; color: var(--ink);
+  }
 </style>
 </head>
 <body>
@@ -198,6 +220,42 @@
           <div class="name">Smart Toilet</div>
           <div class="idx">04 / 04</div>
         </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG TEASER -->
+<section class="section blog-teaser">
+  <div class="wrap">
+    <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
+      <div>
+        <div class="eyebrow">Blog · Notes from the kiln</div>
+        <h2 style="margin-top:8px">Latest <span class="soft">from the kiln.</span></h2>
+      </div>
+      <a class="more-link" href="/blog/">All articles →</a>
+    </div>
+
+    <div class="bt-grid">
+      <a class="bt-card" href="/zh/blog/raw-material/">
+        <div class="tag mono">01 · Process</div>
+        <h3>Raw materials &amp; slip — where a ceramic begins</h3>
+        <div class="read mono">5 min · 中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/sink-types/">
+        <div class="tag mono">02 · Buying guide</div>
+        <h3>Above-counter vs under-counter vs drop-in basin</h3>
+        <div class="read mono">4 min · 中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/art-basin/">
+        <div class="tag mono">03 · Design trend</div>
+        <h3>What is an art basin? Why are more people choosing one?</h3>
+        <div class="read mono">6 min · 中文 →</div>
+      </a>
+      <a class="bt-card" href="/zh/blog/art-basin-buying/">
+        <div class="tag mono">04 · Buying guide</div>
+        <h3>Art basin: drawbacks, fit, three buying tips</h3>
+        <div class="read mono">7 min · 中文 →</div>
       </a>
     </div>
   </div>
