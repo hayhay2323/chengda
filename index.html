@@ -95,10 +95,12 @@
     line-height: 1.55;
   }
   .actions { display: flex; gap: 12px; flex-wrap: wrap; }
-  /* Photo fills the frame: object-fit cover, no mask — its own gray bg blends with hero bg */
-  .hero .porcelain-frame { aspect-ratio: 3 / 4; width: 100%; }
+  /* Hero photo enlarged — cover-crop the empty bg so the toilet dominates */
+  .hero .porcelain-frame { aspect-ratio: 4 / 5; width: 100%; overflow: hidden; }
   .hero .porcelain-frame img {
-    width: 100%; height: 100%; object-fit: contain; object-position: center;
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: 55% 60%;
+    transform: scale(1.18); transform-origin: 55% 62%;
     -webkit-mask-image: none; mask-image: none;
   }
 
