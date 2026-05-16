@@ -61,6 +61,27 @@
   }
   .gallery .gi.in { opacity: 1; transform: translateX(0); }
   .gallery .gi img { width: 100%; height: 100%; object-fit: contain; }
+  .gscroll {
+    position: relative;
+    height: 3px;
+    background: var(--line);
+    border-radius: 2px;
+    margin: 4px var(--pad) 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .gthumb {
+    position: absolute;
+    top: -2px; left: 0;
+    height: 7px;
+    min-width: 36px;
+    background: var(--ink);
+    border-radius: 4px;
+    cursor: grab;
+    transition: background .2s var(--t);
+  }
+  .gthumb:hover { background: var(--ink-2); }
+  .gthumb.drag, .gthumb:active { cursor: grabbing; transition: none; }
 
   .spec-card {
     margin-top: 24px;
@@ -146,6 +167,7 @@
     <div class="gi"><img src="/assets/products/T207/g10.webp?v=2" alt="T207 view 10" loading="lazy" decoding="async" /></div>
     <div class="gi"><img src="/assets/products/T207/g11.webp?v=2" alt="T207 view 11" loading="lazy" decoding="async" /></div>
   </div>
+  <div class="gscroll" id="gscroll"><div class="gthumb" id="gthumb"></div></div>
   <script>
   (function(){
     const root = document.getElementById('gallery'); if (!root) return;
@@ -154,6 +176,55 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { root, rootMargin: '0px 80px 0px 80px', threshold: 0.15 });
     items.forEach(i => io.observe(i));
+
+    const track = document.getElementById('gscroll');
+    const thumb = document.getElementById('gthumb');
+    function maxScroll(){ return root.scrollWidth - root.clientWidth; }
+    function trackW(){ return track.clientWidth; }
+    function thumbW(){
+      const ratio = root.clientWidth / root.scrollWidth;
+      return Math.max(36, Math.round(trackW() * ratio));
+    }
+    function sync(){
+      const tw = thumbW();
+      thumb.style.width = tw + 'px';
+      const m = maxScroll();
+      const p = m > 0 ? (root.scrollLeft / m) * (trackW() - tw) : 0;
+      thumb.style.left = p + 'px';
+    }
+    root.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    requestAnimationFrame(sync);
+
+    let dragging = false, startX = 0, startLeft = 0;
+    function setFromClient(clientX){
+      const rect = track.getBoundingClientRect();
+      const tw = thumbW();
+      const x = Math.max(0, Math.min(trackW() - tw, clientX - rect.left - tw / 2));
+      const ratio = (trackW() - tw) > 0 ? x / (trackW() - tw) : 0;
+      root.scrollLeft = ratio * maxScroll();
+    }
+    thumb.addEventListener('pointerdown', (e) => {
+      dragging = true; thumb.classList.add('drag');
+      startX = e.clientX; startLeft = parseFloat(thumb.style.left || '0');
+      thumb.setPointerCapture(e.pointerId);
+    });
+    thumb.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const tw = thumbW();
+      const dx = e.clientX - startX;
+      const newLeft = Math.max(0, Math.min(trackW() - tw, startLeft + dx));
+      const ratio = (trackW() - tw) > 0 ? newLeft / (trackW() - tw) : 0;
+      root.scrollLeft = ratio * maxScroll();
+    });
+    thumb.addEventListener('pointerup', (e) => {
+      dragging = false; thumb.classList.remove('drag');
+      try { thumb.releasePointerCapture(e.pointerId); } catch(_) {}
+    });
+    track.addEventListener('click', (e) => {
+      if (e.target === thumb) return;
+      setFromClient(e.clientX);
+    });
   })();
   </script>
 </div>
