@@ -3,37 +3,52 @@
         xmlns:image="http://www.google.com/schemas/sitemaps-image/0.9">
   <url>
     <loc>https://www.gdchengda.hk/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/products/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/products/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/products/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/products/" />
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/about/</loc>
     <lastmod>2026-05-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/about/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/oem/</loc>
     <lastmod>2026-05-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/oem/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/oem/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/oem/" />
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/contact/</loc>
     <lastmod>2026-05-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/contact/" />
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/blog/</loc>
     <lastmod>2026-05-11</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/blog/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.gdchengda.hk/zh/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.gdchengda.hk/blog/" />
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -189,14 +204,14 @@
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.gdchengda.hk/" xmlns:xhtml="http://www.w3.org/1999/xhtml"/>
   </url>
   <url>
     <loc>https://www.gdchengda.hk/zh/products/</loc>
-    <lastmod>2026-05-11</lastmod>
+    <lastmod>2026-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
