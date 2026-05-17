@@ -218,7 +218,7 @@
     <div class="section-head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:none;gap:24px;flex-wrap:wrap">
       <div>
         <div class="eyebrow">Products</div>
-        <h2 style="margin-top:8px">Four <span class="soft">platforms.</span></h2>
+        <h2 style="margin-top:8px">Three <span class="soft">platforms.</span></h2>
       </div>
       <a class="more-link" href="/products/">Full catalog →</a>
     </div>
@@ -231,25 +231,18 @@
           <div class="idx">01 / 04</div>
         </div>
       </a>
-      <a class="p-card" href="/products/?cat=pedestal">
-        <div class="img"><span id="ico-pedestal"></span></div>
+      <a class="p-card" href="/products/?cat=wallhung">
+        <div class="img"><span id="ico-wallhung"></span></div>
         <div class="meta">
-          <div class="name">Pedestal</div>
-          <div class="idx">02 / 04</div>
+          <div class="name">Wall-hung Toilet</div>
+          <div class="idx">02 / 03</div>
         </div>
       </a>
       <a class="p-card" href="/products/?cat=standard">
         <div class="img"><span id="ico-toilet"></span></div>
         <div class="meta">
           <div class="name">Toilet</div>
-          <div class="idx">03 / 04</div>
-        </div>
-      </a>
-      <a class="p-card" href="/products/?cat=smart">
-        <div class="img"><span id="ico-smart"></span></div>
-        <div class="meta">
-          <div class="name">Smart Toilet</div>
-          <div class="idx">04 / 04</div>
+          <div class="idx">03 / 03</div>
         </div>
       </a>
     </div>
@@ -338,9 +331,8 @@ renderShell('home');
 const ICONS = window.CHENGDA_ICONS || {};
 const place = (id, key) => { const el = document.getElementById(id); if (el && ICONS[key]) el.innerHTML = ICONS[key]; };
 place('ico-washbasin', 'washbasin');
-place('ico-pedestal', 'pedestal');
+place('ico-wallhung', 'toilet');
 place('ico-toilet', 'toilet');
-place('ico-smart', 'smarttoilet');
 </script>
 
 <script type="application/ld+json">
@@ -396,9 +388,7 @@ place('ico-smart', 'smarttoilet');
         "url": "https://www.gdchengda.hk/products/",
         "itemListElement": [
           {"@type": "OfferCatalog", "name": "Ceramic Washbasins (60+ models)", "url": "https://www.gdchengda.hk/products/?cat=washbasin"},
-          {"@type": "OfferCatalog", "name": "Pedestal Basins (40+ models)", "url": "https://www.gdchengda.hk/products/?cat=pedestal"},
-          {"@type": "OfferCatalog", "name": "One-piece Toilets · T201–T215 (15 models)", "url": "https://www.gdchengda.hk/products/?cat=standard"},
-          {"@type": "OfferCatalog", "name": "Smart Toilets", "url": "https://www.gdchengda.hk/products/?cat=smart"}
+          {"@type": "OfferCatalog", "name": "One-piece Toilets · T201–T215 (15 models)", "url": "https://www.gdchengda.hk/products/?cat=standard"}
         ]
       },
       "knowsAbout": ["ceramic sanitaryware", "vitreous china", "OEM/ODM manufacturing", "slip casting", "high-temperature ceramic firing", "bathroom fixtures", "art basin", "washbasin", "ceramic toilet"],
