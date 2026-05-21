@@ -404,7 +404,7 @@ function renderGrid(){
   if(!items.length){ grid.innerHTML='<div class="grid-empty">此子分類即將上線 —— <a href="/zh/contact/" style="color:var(--ink);text-decoration:underline;">聯絡我哋</a>查詢 OEM。</div>'; return; }
   grid.innerHTML=items.map(it=>{
     const href=it.img?`/zh/products/${it.code}/`:'#';
-    const visual=it.img?`<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`:(ICONS[CATS[cat].icon]||'');
+    const visual=it.img?`<img src="${it.img}" alt="${it.name}" loading="lazy" decoding="async" />`:(ICONS[CATS[cat].icon]||'');
     return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div></a>`;
   }).join('');
 }
