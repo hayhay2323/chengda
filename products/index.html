@@ -31,8 +31,8 @@
   .cat-node:hover { color: var(--ink); }
   .cat-node.active { color: var(--ink); }
   .cat-row-0 { padding: 16px 0; font-size: 16px; font-weight: 600; color: var(--ink); }
-  .cat-row-1 { padding: 11px 0; font-size: 14px; font-weight: 500; }
-  .cat-row-2 { padding: 8px 0 8px 20px; font-size: 13px; }
+  .cat-row-1 { padding: 10px 0 10px 14px; font-size: 14px; font-weight: 500; }
+  .cat-row-2 { padding: 8px 0 8px 32px; font-size: 13px; }
   .cat-node.active.cat-row-1, .cat-node.active.cat-row-2 { font-weight: 600; }
   .cat-label { display: flex; align-items: center; gap: 8px; min-width: 0; }
   .cat-caret { width: 6px; height: 10px; flex-shrink: 0; position: relative; }
@@ -428,11 +428,16 @@ function renderNav(){
     const isCur=cc===cat;
     const total=CATS[cc].items.length;
     const cntTxt = cc==='smart' ? 'soon' : total;
+    const hasTree = isCur && (TREES[cat]||[]).length;
+    const drawerOpen = hasTree && sub!=='all';
     h+='<div class="cat-group">';
-    h+=`<a class="cat-node cat-row-0${isCur&&sub==='all'?' active':''}" href="?cat=${cc}" data-cat="${cc}" data-sel="all">`;
-    h+=`<span class="cat-label">${CAT_LABEL[cc]}</span><span class="cat-count">${cntTxt}</span></a>`;
-    if(isCur && (TREES[cat]||[]).length){
-      h+='<div class="cat-sub">'+TREES[cat].map(n=>nodeHtml(n,1)).join('')+'</div>';
+    h+=`<a class="cat-node cat-row-0" href="?cat=${cc}" data-cat="${cc}" data-root="${hasTree?1:0}">`;
+    h+=`<span class="cat-label">${hasTree?`<span class="cat-caret has${drawerOpen?' open':''}"></span>`:''}<span>${CAT_LABEL[cc]}</span></span><span class="cat-count">${cntTxt}</span></a>`;
+    if(hasTree){
+      h+=`<div class="cat-children${drawerOpen?' open':''}"><div class="cat-children-inner cat-sub">`;
+      h+=nodeHtml({id:'all',label:'All'},1);
+      h+=TREES[cat].map(n=>nodeHtml(n,1)).join('');
+      h+='</div></div>';
     }
     h+='</div>';
   }
@@ -441,29 +446,28 @@ function renderNav(){
 function selectNode(sel){
   sub=sel;
   catNav.querySelectorAll('.cat-node').forEach(n=>{
-    const on = n.classList.contains('cat-row-0')
-      ? (n.dataset.cat===cat && sel==='all')
-      : (n.dataset.sel===sel);
-    n.classList.toggle('active',on);
+    n.classList.toggle('active', !n.classList.contains('cat-row-0') && n.dataset.sel===sel);
   });
   const u=new URL(location.href);
   if(sel==='all')u.searchParams.delete('sub'); else u.searchParams.set('sub',sel);
   history.replaceState(null,'',u);
   renderGrid();
 }
+function toggleDrawer(node){
+  const ch=node.parentElement.querySelector(':scope > .cat-children');
+  const car=node.querySelector('.cat-caret');
+  if(ch){ ch.classList.toggle('open'); if(car)car.classList.toggle('open'); }
+}
 catNav.addEventListener('click', e=>{
   const root=e.target.closest('a.cat-row-0');
   if(root){
     if(root.dataset.cat!==cat) return;
-    e.preventDefault(); selectNode('all'); return;
+    e.preventDefault();
+    if(root.dataset.root==='1') toggleDrawer(root);
+    return;
   }
   const node=e.target.closest('.cat-node'); if(!node) return;
-  if(node.dataset.has==='1'){
-    const item=node.parentElement;
-    const ch=item.querySelector(':scope > .cat-children');
-    const car=node.querySelector('.cat-caret');
-    if(ch){ ch.classList.toggle('open'); if(car)car.classList.toggle('open'); }
-  }
+  if(node.dataset.has==='1') toggleDrawer(node);
   selectNode(node.dataset.sel);
 });
 
