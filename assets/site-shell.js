@@ -97,8 +97,6 @@
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (!reduced && 'IntersectionObserver' in window) {
       const sel = 'section, .stats, .porcelain-frame, .card-grid > *, .hf-row, .bt-card, .b-card, .cap, .step, .p-card';
-      const targets = document.querySelectorAll(sel);
-      targets.forEach(t => t.classList.add('reveal'));
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
           if (e.isIntersecting) {
@@ -107,7 +105,26 @@
           }
         });
       }, { threshold: 0.06, rootMargin: '0px 0px -6% 0px' });
-      targets.forEach(t => io.observe(t));
+      // Above-the-fold elements render instantly (no fade-in wait); only
+      // below-fold sections get the scroll-reveal. Keeps first paint snappy.
+      document.querySelectorAll(sel).forEach(t => {
+        if (t.getBoundingClientRect().top < innerHeight) return;
+        t.classList.add('reveal');
+        io.observe(t);
+      });
+    }
+
+    // Speculation Rules — prerender same-origin pages on hover so the
+    // next click feels instant (Chrome). Other browsers ignore it.
+    if (HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')
+        && !document.getElementById('spec-rules')) {
+      const sr = document.createElement('script');
+      sr.type = 'speculationrules';
+      sr.id = 'spec-rules';
+      sr.textContent = JSON.stringify({
+        prerender: [{ where: { href_matches: '/*' }, eagerness: 'moderate' }]
+      });
+      document.body.appendChild(sr);
     }
   };
 })();
