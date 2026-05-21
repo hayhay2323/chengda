@@ -11,7 +11,7 @@
 - **Brands:** CHENGDA, HUANA, 世家花
 - **Specialty:** OEM/ODM ceramic sanitary ware manufacturing
 
-## Published Catalog (130 models live, more available on request)
+## Published Catalog (132 models live, more available on request)
 
 Four product categories in production with rendered photography and direct catalog URLs. Smart toilet line and above-counter art basins available for OEM customisation — contact sales for current specs.
 
@@ -44,18 +44,18 @@ Detail-page pattern (zh-Hant): https://www.gdchengda.hk/zh/products/{CODE}/
 Listing (EN): https://www.gdchengda.hk/products/?cat=pedestal · (zh-Hant): /zh/products/?cat=pedestal
 Detail-page pattern: /products/{CODE}/ and /zh/products/{CODE}/
 
-### 3. Standard Toilets (普通馬桶) — 38 models published
+### 3. Standard Toilets (普通馬桶) — 40 models published
 
 One category, two sub-types:
 
-**Floor-standing (立式 · T2xx) — 15 models** — T201–T215. S-trap, dual-flush, antibacterial smart-clean glaze, PP soft-close seat.
+**Floor-standing (立式 · T2xx) — 17 models** — T201–T217. S-trap, dual-flush, antibacterial smart-clean glaze, PP soft-close seat.
 - Cascade siphon (T201) · Cascade vortex (T202) · Rimless (T203)
 - Concealed cistern (T204–T206) · Super siphon (T207–T215)
 
 **Wall-hung (掛式 · T1xx) — 23 models** — T101–T123. Wall-mounted P-trap, dual-flush, soft-close PP seat.
 
 Listing (EN): https://www.gdchengda.hk/products/?cat=standard · (zh-Hant): /zh/products/?cat=standard
-Detail pages: /products/T101–T123/ and /products/T201–T215/ (mirrored under /zh/products/)
+Detail pages: /products/T101–T123/ and /products/T201–T217/ (mirrored under /zh/products/)
 
 
 ## OEM/ODM Services
