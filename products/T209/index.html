@@ -47,17 +47,58 @@
   }
   .pd-hero img { width: 100%; height: 100%; object-fit: cover; object-position: 55% 50%; transform: scale(1.05); transform-origin: 55% 50%; }
 
-  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
-  .gallery .gi {
-    aspect-ratio: 1/1;
-    background: var(--bg-2);
-    
-    border-radius: var(--r-lg);
-    overflow: hidden;
-    display: flex; align-items: center; justify-content: center;
-    padding: 0;
+  .gallery {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    scroll-padding-left: var(--pad);
+    padding: 8px var(--pad) 24px;
+    margin-left: calc(var(--pad) * -1);
+    margin-right: calc(var(--pad) * -1);
+    scrollbar-width: none;
+    cursor: grab;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
   }
-  .gallery .gi img { width: 100%; height: 100%; object-fit: cover; object-position: center 55%; transform: scale(1.05); }
+  .gallery.dragging { cursor: grabbing; scroll-snap-type: none; }
+  .gallery.dragging .gi { pointer-events: none; }
+  .gallery::-webkit-scrollbar { display: none; }
+  .gallery .gi {
+    flex: 0 0 auto;
+    width: clamp(220px, 28vw, 360px);
+    aspect-ratio: 3/4;
+    display: flex; align-items: center; justify-content: center;
+    scroll-snap-align: start;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity .9s var(--t), transform .9s var(--t);
+  }
+  .gallery .gi.in { opacity: 1; transform: translateX(0); }
+  .gallery .gi img { width: 100%; height: 100%; object-fit: contain; }
+  .gscroll {
+    position: relative;
+    height: 3px;
+    background: var(--line);
+    border-radius: 2px;
+    margin: 4px var(--pad) 0;
+    cursor: pointer;
+    user-select: none;
+  }
+  .gthumb {
+    position: absolute;
+    top: -2px; left: 0;
+    height: 7px;
+    min-width: 36px;
+    background: var(--ink);
+    border-radius: 4px;
+    cursor: grab;
+    transition: background .2s var(--t);
+  }
+  .gthumb:hover { background: var(--ink-2); }
+  .gthumb.drag, .gthumb:active { cursor: grabbing; transition: none; }
 
   .spec-card {
     margin-top: 24px;
@@ -130,15 +171,119 @@
 
 <div style="margin-top:64px">
   <div class="eyebrow mono" style="color:var(--muted);margin-bottom:18px">Gallery</div>
-  <div class="gallery">
-    <div class="gi"><img src="/assets/products/T209/g1.webp" alt="T209 view 1" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T209/g2.webp" alt="T209 view 2" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T209/g3.webp" alt="T209 view 3" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T209/g4.webp" alt="T209 view 4" loading="lazy" decoding="async" /></div>
-    <div class="gi"><img src="/assets/products/T209/g5.webp" alt="T209 view 5" loading="lazy" decoding="async" /></div>
+  <div class="gallery" id="gallery">
+    <div class="gi"><img src="/assets/products/T209/g1.webp" alt="Chengda T209 ceramic toilet — angle 1 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g2.webp" alt="Chengda T209 ceramic toilet — angle 2 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g3.webp" alt="Chengda T209 ceramic toilet — angle 3 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g4.webp" alt="Chengda T209 ceramic toilet — angle 4 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g5.webp" alt="Chengda T209 ceramic toilet — angle 5 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g6.webp" alt="Chengda T209 ceramic toilet — angle 6 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g7.webp" alt="Chengda T209 ceramic toilet — angle 7 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g8.webp" alt="Chengda T209 ceramic toilet — angle 8 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g9.webp" alt="Chengda T209 ceramic toilet — angle 9 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g10.webp" alt="Chengda T209 ceramic toilet — angle 10 of 11" loading="lazy" decoding="async" /></div>
+    <div class="gi"><img src="/assets/products/T209/g11.webp" alt="Chengda T209 ceramic toilet — angle 11 of 11" loading="lazy" decoding="async" /></div>
   </div>
-</div>
+  <div class="gscroll" id="gscroll"><div class="gthumb" id="gthumb"></div></div>
+  <script>
+  (function(){
+    const root = document.getElementById('gallery'); if (!root) return;
+    const items = root.querySelectorAll('.gi');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { root, rootMargin: '0px 80px 0px 80px', threshold: 0.15 });
+    items.forEach(i => io.observe(i));
 
+    const track = document.getElementById('gscroll');
+    const thumb = document.getElementById('gthumb');
+    const maxScroll = () => root.scrollWidth - root.clientWidth;
+    const trackW = () => track.clientWidth;
+    const thumbW = () => Math.max(36, Math.round(trackW() * (root.clientWidth / root.scrollWidth)));
+
+    let raf = null, twCache = thumbW();
+    function sync(){
+      raf = null;
+      twCache = thumbW();
+      thumb.style.width = twCache + 'px';
+      const m = maxScroll();
+      const p = m > 0 ? (root.scrollLeft / m) * (trackW() - twCache) : 0;
+      thumb.style.transform = `translateX(${p}px)`;
+    }
+    function queueSync(){ if (raf == null) raf = requestAnimationFrame(sync); }
+    root.addEventListener('scroll', queueSync, { passive: true });
+    window.addEventListener('resize', queueSync);
+    sync();
+
+    // Drag the thumb
+    let tDrag = false, tStartX = 0, tStartLeft = 0;
+    thumb.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      tDrag = true; thumb.classList.add('drag');
+      tStartX = e.clientX;
+      const m = maxScroll();
+      tStartLeft = m > 0 ? (root.scrollLeft / m) * (trackW() - twCache) : 0;
+      thumb.setPointerCapture(e.pointerId);
+    });
+    thumb.addEventListener('pointermove', (e) => {
+      if (!tDrag) return;
+      const room = trackW() - twCache;
+      const newLeft = Math.max(0, Math.min(room, tStartLeft + (e.clientX - tStartX)));
+      root.scrollLeft = room > 0 ? (newLeft / room) * maxScroll() : 0;
+    });
+    const tEnd = (e) => {
+      if (!tDrag) return;
+      tDrag = false; thumb.classList.remove('drag');
+      try { thumb.releasePointerCapture(e.pointerId); } catch(_) {}
+    };
+    thumb.addEventListener('pointerup', tEnd);
+    thumb.addEventListener('pointercancel', tEnd);
+
+    // Click the track to jump (smooth)
+    track.addEventListener('click', (e) => {
+      if (e.target === thumb) return;
+      const rect = track.getBoundingClientRect();
+      const tw = twCache;
+      const room = trackW() - tw;
+      const x = Math.max(0, Math.min(room, e.clientX - rect.left - tw / 2));
+      root.scrollTo({ left: room > 0 ? (x / room) * maxScroll() : 0, behavior: 'smooth' });
+    });
+
+    // Grab + drag anywhere on the gallery
+    let gDrag = false, gStartX = 0, gStartLeft = 0, gMoved = 0;
+    root.addEventListener('pointerdown', (e) => {
+      if (e.pointerType === 'touch') return; // let native touch handle
+      gDrag = true; gMoved = 0;
+      gStartX = e.clientX; gStartLeft = root.scrollLeft;
+      root.classList.add('dragging');
+      root.setPointerCapture(e.pointerId);
+    });
+    root.addEventListener('pointermove', (e) => {
+      if (!gDrag) return;
+      const dx = e.clientX - gStartX;
+      gMoved = Math.max(gMoved, Math.abs(dx));
+      root.scrollLeft = gStartLeft - dx;
+    });
+    const gEnd = (e) => {
+      if (!gDrag) return;
+      gDrag = false;
+      root.classList.remove('dragging');
+      try { root.releasePointerCapture(e.pointerId); } catch(_) {}
+    };
+    root.addEventListener('pointerup', gEnd);
+    root.addEventListener('pointercancel', gEnd);
+    // Prevent stray clicks after a drag (e.g. so dragging doesn't open an image)
+    root.addEventListener('click', (e) => { if (gMoved > 6) { e.preventDefault(); e.stopPropagation(); } }, true);
+
+    // Redirect vertical mouse wheel to horizontal scroll within the gallery
+    root.addEventListener('wheel', (e) => {
+      if (Math.abs(e.deltaY) > Math.abs(e.deltaX) && Math.abs(e.deltaY) > 0) {
+        e.preventDefault();
+        root.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+  })();
+  </script>
+</div>
 
 <div style="margin-top:64px">
   <div class="eyebrow mono" style="color:var(--muted);margin-bottom:18px">Dimensions</div>
