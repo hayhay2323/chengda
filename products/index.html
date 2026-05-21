@@ -356,7 +356,10 @@ const TREES = {
     {id:'floor', label:'Floor-standing'},
     {id:'wall', label:'Wall-hung'},
   ],
-  smart: [],
+  smart: [
+    {id:'st_floor', label:'Floor-standing'},
+    {id:'st_wall', label:'Wall-hung'},
+  ],
 };
 const CAT_ORDER = ['washbasin','pedestal','standard','smart'];
 const CAT_LABEL = {washbasin:'Washbasin', pedestal:'Pedestal Basin', standard:'Standard Toilet', smart:'Smart Toilet'};
@@ -364,59 +367,59 @@ const CAT_LABEL = {washbasin:'Washbasin', pedestal:'Pedestal Basin', standard:'S
 const params = new URLSearchParams(location.search);
 let cat = params.get('cat') || 'washbasin'; if (!CATS[cat]) cat='washbasin';
 let sub = params.get('sub') || 'all';
-const C = CATS[cat];
-document.getElementById('catTitle').textContent = C.title;
-document.getElementById('catSub').innerHTML = C.sub.map(s=>`<span>${s}</span>`).join('');
 const grid = document.getElementById('grid');
 const catNav = document.getElementById('catNav');
 
-function leafIds(n){ return (n.children&&n.children.length) ? n.children.flatMap(leafIds) : [n.id]; }
-function findNode(id){
+function leafIdsOf(n){ return (n.children&&n.children.length) ? n.children.flatMap(leafIdsOf) : [n.id]; }
+function findNodeIn(tree,id){
   let r=null;
-  (function w(ns){ for(const n of ns){ if(n.id===id){r=n;return;} if(n.children)w(n.children); } })(TREES[cat]||[]);
+  (function w(ns){ for(const n of ns){ if(n.id===id){r=n;return;} if(n.children)w(n.children); } })(tree||[]);
   return r;
 }
-function itemsFor(id){
-  if(id==='all') return C.items;
-  const n=findNode(id);
-  const leaves=new Set(n?leafIds(n):[id]);
-  return C.items.filter(i=>leaves.has(i.sub));
+function itemsIn(cc,id){
+  const items=CATS[cc].items;
+  if(id==='all') return items;
+  const node=findNodeIn(TREES[cc],id);
+  const leaves=new Set(node?leafIdsOf(node):[id]);
+  return items.filter(i=>leaves.has(i.sub));
 }
-function countOf(id){ return itemsFor(id).length; }
-function openPath(){
+function countIn(cc,id){ return itemsIn(cc,id).length; }
+function openPathIn(cc,selSub){
   const path=new Set();
   (function w(ns,anc){ for(const n of ns){
-    if(n.id===sub){ anc.forEach(x=>path.add(x)); if(n.children&&n.children.length)path.add(n.id); }
+    if(n.id===selSub){ anc.forEach(x=>path.add(x)); if(n.children&&n.children.length)path.add(n.id); }
     if(n.children)w(n.children,anc.concat(n.id));
-  } })(TREES[cat]||[], []);
+  } })(TREES[cc]||[], []);
   return path;
 }
-function isComingSoon(){ return cat==='smart' || C.comingSoon; }
+function isComingSoon(cc){ return cc==='smart' || CATS[cc].comingSoon; }
 
+function applyCatHeader(){
+  document.getElementById('catTitle').textContent = CATS[cat].title;
+  document.getElementById('catSub').innerHTML = CATS[cat].sub.map(s=>`<span>${s}</span>`).join('');
+}
 function renderGrid(){
-  if(isComingSoon()){ grid.innerHTML='<div class="grid-empty">Smart Toilet series — coming soon. <a href="/contact/" style="color:var(--ink);text-decoration:underline;">Enquire about OEM</a>.</div>'; return; }
-  const items=itemsFor(sub);
+  if(isComingSoon(cat)){ grid.innerHTML='<div class="grid-empty">Smart Toilet series — coming soon. <a href="/contact/" style="color:var(--ink);text-decoration:underline;">Enquire about OEM</a>.</div>'; return; }
+  const items=itemsIn(cat,sub);
   if(!items.length){ grid.innerHTML='<div class="grid-empty">This sub-category is coming soon — <a href="/contact/" style="color:var(--ink);text-decoration:underline;">contact us</a> for OEM enquiries.</div>'; return; }
   grid.innerHTML=items.map(it=>{
     const href=it.img?`/products/${it.code}/`:'#';
-    const visual=it.img?`<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`:(ICONS[C.icon]||'');
+    const visual=it.img?`<img src="${it.img}" alt="${it.code}" loading="lazy" decoding="async" />`:(ICONS[CATS[cat].icon]||'');
     return `<a class="pcard" data-code="${it.code}" href="${href}"><div class="img">${visual}</div><div class="info"><div class="name">${it.name}</div><div class="dims">${it.dims}</div></div></a>`;
   }).join('');
 }
-
-function nodeHtml(n,depth){
+function nodeHtml(cc,n,depth,openSet){
   const has=!!(n.children&&n.children.length);
-  const cnt=countOf(n.id);
-  const op=openPath();
-  const isOpen=op.has(n.id);
-  const active=n.id===sub;
+  const cnt=isComingSoon(cc)?0:countIn(cc,n.id);
+  const isOpen=openSet.has(n.id);
+  const active=cc===cat && n.id===sub;
   let h='<div class="cat-item">';
-  h+=`<div class="cat-node cat-row-${depth}${active?' active':''}" data-sel="${n.id}" data-has="${has?1:0}">`;
+  h+=`<div class="cat-node cat-row-${depth}${active?' active':''}" data-cat="${cc}" data-sel="${n.id}" data-has="${has?1:0}">`;
   h+=`<span class="cat-label"><span class="cat-caret${has?' has':''}${isOpen?' open':''}"></span><span>${n.label}</span></span>`;
   h+=`<span class="cat-count">${cnt||''}</span></div>`;
   if(has){
     h+=`<div class="cat-children${isOpen?' open':''}"><div class="cat-children-inner">`;
-    h+=n.children.map(c=>nodeHtml(c,depth+1)).join('');
+    h+=n.children.map(c=>nodeHtml(cc,c,depth+1,openSet)).join('');
     h+='</div></div>';
   }
   h+='</div>';
@@ -426,51 +429,45 @@ function renderNav(){
   let h='';
   for(const cc of CAT_ORDER){
     const isCur=cc===cat;
-    const total=CATS[cc].items.length;
-    const cntTxt = cc==='smart' ? 'soon' : total;
-    const hasTree = isCur && (TREES[cat]||[]).length;
-    const drawerOpen = hasTree && sub!=='all';
+    const cntTxt=isComingSoon(cc)?'soon':CATS[cc].items.length;
+    const drawerOpen=isCur;
+    const openSet=isCur?openPathIn(cc,sub):new Set();
     h+='<div class="cat-group">';
-    h+=`<a class="cat-node cat-row-0" href="?cat=${cc}" data-cat="${cc}" data-root="${hasTree?1:0}">`;
-    h+=`<span class="cat-label">${hasTree?`<span class="cat-caret has${drawerOpen?' open':''}"></span>`:''}<span>${CAT_LABEL[cc]}</span></span><span class="cat-count">${cntTxt}</span></a>`;
-    if(hasTree){
-      h+=`<div class="cat-children${drawerOpen?' open':''}"><div class="cat-children-inner cat-sub">`;
-      h+=nodeHtml({id:'all',label:'All'},1);
-      h+=TREES[cat].map(n=>nodeHtml(n,1)).join('');
-      h+='</div></div>';
-    }
-    h+='</div>';
+    h+=`<a class="cat-node cat-row-0" href="?cat=${cc}" data-cat="${cc}">`;
+    h+=`<span class="cat-label"><span class="cat-caret has${drawerOpen?' open':''}"></span><span>${CAT_LABEL[cc]}</span></span><span class="cat-count">${cntTxt}</span></a>`;
+    h+=`<div class="cat-children${drawerOpen?' open':''}"><div class="cat-children-inner cat-sub">`;
+    h+=nodeHtml(cc,{id:'all',label:'All'},1,openSet);
+    h+=(TREES[cc]||[]).map(n=>nodeHtml(cc,n,1,openSet)).join('');
+    h+='</div></div></div>';
   }
   catNav.innerHTML=h;
-}
-function selectNode(sel){
-  sub=sel;
-  catNav.querySelectorAll('.cat-node').forEach(n=>{
-    n.classList.toggle('active', !n.classList.contains('cat-row-0') && n.dataset.sel===sel);
-  });
-  const u=new URL(location.href);
-  if(sel==='all')u.searchParams.delete('sub'); else u.searchParams.set('sub',sel);
-  history.replaceState(null,'',u);
-  renderGrid();
 }
 function toggleDrawer(node){
   const ch=node.parentElement.querySelector(':scope > .cat-children');
   const car=node.querySelector('.cat-caret');
   if(ch){ ch.classList.toggle('open'); if(car)car.classList.toggle('open'); }
 }
+function selectNode(cc,sel){
+  cat=cc; sub=sel;
+  catNav.querySelectorAll('.cat-node').forEach(n=>{
+    n.classList.toggle('active', !n.classList.contains('cat-row-0') && n.dataset.cat===cc && n.dataset.sel===sel);
+  });
+  applyCatHeader();
+  const u=new URL(location.href);
+  u.searchParams.set('cat',cc);
+  if(sel==='all')u.searchParams.delete('sub'); else u.searchParams.set('sub',sel);
+  history.replaceState(null,'',u);
+  renderGrid();
+}
 catNav.addEventListener('click', e=>{
   const root=e.target.closest('a.cat-row-0');
-  if(root){
-    if(root.dataset.cat!==cat) return;
-    e.preventDefault();
-    if(root.dataset.root==='1') toggleDrawer(root);
-    return;
-  }
+  if(root){ e.preventDefault(); toggleDrawer(root); return; }
   const node=e.target.closest('.cat-node'); if(!node) return;
   if(node.dataset.has==='1') toggleDrawer(node);
-  selectNode(node.dataset.sel);
+  selectNode(node.dataset.cat, node.dataset.sel);
 });
 
+applyCatHeader();
 renderNav();
 renderGrid();
 </script>
