@@ -11,9 +11,9 @@
 - **Brands:** CHENGDA, HUANA, 世家花
 - **Specialty:** OEM/ODM ceramic sanitary ware manufacturing
 
-## Published Catalog (76 models live, more available on request)
+## Published Catalog (130 models live, more available on request)
 
-Three product lines currently in production with rendered photography and direct catalog URLs. Full pedestal, wall-hung basin, art basin and smart toilet lines available for OEM customisation — contact sales for current specs.
+Four product categories in production with rendered photography and direct catalog URLs. Smart toilet line and above-counter art basins available for OEM customisation — contact sales for current specs.
 
 ### 1. Ceramic Washbasins (台盆) — 38 models published
 
@@ -32,22 +32,31 @@ Listing: https://www.gdchengda.hk/products/?cat=washbasin (or /zh/products/?cat=
 Detail-page pattern (EN): https://www.gdchengda.hk/products/{CODE}/
 Detail-page pattern (zh-Hant): https://www.gdchengda.hk/zh/products/{CODE}/
 
-### 2. One-Piece Floor-Mount Ceramic Toilets (連體坐便器) — 15 models published
+### 2. Pedestal Basins (柱盆) — 54 models published
 
-T201–T215 series. All floor-mount, S-trap, dual-flush, antibacterial smart-clean glaze, PP soft-close seat, CUPC certified.
+**Floor pedestal basins (立式柱盆 · PB series) — 45 models**
+- PB100 series, single tap hole: PB101–PB125
+- PB200 series: PB201–PB220 (no-tap-hole -N versions available on request)
+
+**Wall-hung basins (掛牆面盆 · WB series) — 9 models**
+- WB100–WB108
+
+Listing (EN): https://www.gdchengda.hk/products/?cat=pedestal · (zh-Hant): /zh/products/?cat=pedestal
+Detail-page pattern: /products/{CODE}/ and /zh/products/{CODE}/
+
+### 3. Standard Toilets (普通馬桶) — 38 models published
+
+One category, two sub-types:
+
+**Floor-standing (立式 · T2xx) — 15 models** — T201–T215. S-trap, dual-flush, antibacterial smart-clean glaze, PP soft-close seat.
 - Cascade siphon (T201) · Cascade vortex (T202) · Rimless (T203)
-- Concealed cistern (T204–T206), low silhouette down to 650 mm
-- Super siphon (T207–T215), vortex pre-rinse + high-velocity siphonic pull
+- Concealed cistern (T204–T206) · Super siphon (T207–T215)
+
+**Wall-hung (掛式 · T1xx) — 23 models** — T101–T123. Wall-mounted P-trap, dual-flush, soft-close PP seat.
 
 Listing (EN): https://www.gdchengda.hk/products/?cat=standard · (zh-Hant): /zh/products/?cat=standard
-Detail pages: /products/T201/ through /products/T215/ (mirrored at /zh/products/T201/ through /zh/products/T215/)
+Detail pages: /products/T101–T123/ and /products/T201–T215/ (mirrored under /zh/products/)
 
-### 3. Wall-Hung Toilets (壁掛馬桶 · T10 series) — 23 models published
-
-T101–T123. Wall-mounted ceramic, dual-flush, P-trap 180 mm, soft-close PP seat.
-
-Listing (EN): https://www.gdchengda.hk/products/?cat=wallhung · (zh-Hant): /zh/products/?cat=wallhung
-Detail pages: /products/T101/ through /products/T123/ (mirrored at /zh/products/T101/ through /zh/products/T123/)
 
 ## OEM/ODM Services
 
