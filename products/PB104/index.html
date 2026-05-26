@@ -137,9 +137,8 @@
   }
   .pd-col-ico svg { width: 14px; height: 14px; }
 
-  .pd-pack-img { width: 100%; aspect-ratio: 4/3; background: var(--bg-2); border-radius: var(--r-md); margin-bottom: 14px;
-    display: flex; align-items: center; justify-content: center; overflow: hidden; }
-  .pd-pack-img svg { width: 70%; height: auto; }
+  .pd-pack-img { width: 100%; aspect-ratio: 3/2; background: var(--bg-2); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; }
+  .pd-pack-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pd-pack-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
   .pd-pack-list li { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--ink-2); }
   .pd-pack-list li::before { content: "›"; color: var(--muted); flex-shrink: 0; }
@@ -246,6 +245,7 @@
         <div class="pd-specs">
           <div class="k">Series</div><div class="v">PB100 series · single tap hole</div>
           <div class="k">Dimensions</div><div class="v">425 × 425 × 950 mm<span class="small">16.7″ × 16.7″ × 37.4″</span></div>
+          <div class="k">Net Weight</div><div class="v">5 KGS</div>
           <div class="k">Body Forming</div><div class="v">High-pressure casting</div>
           <div class="k">Material</div><div class="v">High-temp fired ceramic<span class="small">Vitreous china, 1,250 °C</span></div>
           <div class="k">Glaze</div><div class="v">Antibacterial smart-clean glaze</div>
@@ -338,17 +338,8 @@
 
       <div class="pd-col">
         <h3>Packaging</h3>
-        <div class="pd-pack-img" aria-hidden="true">
-          <svg viewBox="0 0 300 220" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="150" cy="200" rx="115" ry="6" fill="rgba(0,0,0,0.10)"/>
-            <path d="M 30 65 L 215 65 L 215 188 L 30 188 Z" fill="#b8916d"/>
-            <path d="M 30 65 L 100 32 L 285 32 L 215 65 Z" fill="#d4ad84"/>
-            <path d="M 215 65 L 285 32 L 285 155 L 215 188 Z" fill="#9a7853"/>
-            <path d="M 122 47 L 192 47" stroke="#e8d2ad" stroke-width="3" stroke-dasharray="0"/>
-            <path d="M 125 49 L 189 49" stroke="#c4a482" stroke-width="0.5" stroke-dasharray="2 2"/>
-            <text x="122" y="138" font-family="Inter, sans-serif" font-size="24" font-weight="700" fill="#2d1f12" text-anchor="middle" letter-spacing="1">CHENGDA</text>
-            <text x="250" y="138" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2d1f12" text-anchor="middle" letter-spacing="0.5" transform="rotate(0 250 138)">CHENGDA</text>
-          </svg>
+        <div class="pd-pack-img">
+          <img src="/assets/packaging/carton.webp" alt="Chengda export carton — 5-layer kraft, foam-protected" loading="lazy" />
         </div>
         <ul class="pd-pack-list">
           <li>5-layer export carton</li>
@@ -477,7 +468,7 @@
   "manufacturer":{"@type":"Organization","@id":"https://www.gdchengda.hk/#organization","name":"Guangdong Chengda Intelligent Technology Co., Ltd."},
   "url": "https://www.gdchengda.hk/products/PB104/",
   
-  "additionalProperty":[{"@type":"PropertyValue","name":"Material","value":"Vitreous china"},{"@type":"PropertyValue","name":"Firing temperature","value":"1,250 °C"},{"@type":"PropertyValue","name":"Body forming","value":"High-pressure casting"},{"@type":"PropertyValue","name":"Certification","value":"CUPC · ISO 9001"},{"@type":"PropertyValue","name":"MOQ","value":"100 pcs (OEM/ODM customization on request)"},{"@type":"PropertyValue","name":"Lead time","value":"15–30 days"}]
+  "additionalProperty":[{"@type":"PropertyValue","name":"Material","value":"Vitreous china"},{"@type":"PropertyValue","name":"Firing temperature","value":"1,250 °C"},{"@type":"PropertyValue","name":"Net weight","value":"5 KGS"},{"@type":"PropertyValue","name":"Body forming","value":"High-pressure casting"},{"@type":"PropertyValue","name":"Certification","value":"CUPC · ISO 9001"},{"@type":"PropertyValue","name":"MOQ","value":"100 pcs (OEM/ODM customization on request)"},{"@type":"PropertyValue","name":"Lead time","value":"15–30 days"}]
 }
 </script>
 <script type="application/ld+json">
