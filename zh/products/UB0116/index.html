@@ -113,8 +113,8 @@
   .pd-tech-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: start; }
   @media (max-width: 880px) { .pd-tech-grid { grid-template-columns: 1fr; } }
   .pd-tech-draws { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  .pd-tech-draws.single { grid-template-columns: 1fr; }
-  .pd-tech-draws.single .pd-tech-draw { aspect-ratio: 3/2; padding: 24px; }
+  .pd-tech-draws.two { grid-template-columns: 1fr 1fr; }
+  .pd-tech-draws.two .pd-tech-draw { aspect-ratio: 3/2; padding: 18px; }
   .pd-tech-draw { background: #fff; border-radius: var(--r-md); padding: 16px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
   .pd-tech-draw img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 
@@ -278,8 +278,9 @@
       <div class="section-block">
         <h2 class="section-title">技術圖（mm）</h2>
         <div class="pd-tech-grid">
-          <div class="pd-tech-draws single">
-            <div class="pd-tech-draw"><img src="/assets/products/UB0116/tech/main.webp" alt="UB0116 技術圖 — 415 × 285 × 160 mm" loading="lazy" /></div>
+          <div class="pd-tech-draws two">
+            <div class="pd-tech-draw"><img src="/assets/products/UB0116/tech/top.webp" alt="UB0116 俯視圖 — 415 × 285 mm (內徑 370 × 220 mm)" loading="lazy" /></div>
+            <div class="pd-tech-draw"><img src="/assets/products/UB0116/tech/section.webp" alt="UB0116 剖面圖 — 160 mm 深 (內深 115 mm)" loading="lazy" /></div>
           </div>
 
           <div class="pd-tech-specs">
