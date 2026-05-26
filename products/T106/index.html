@@ -121,15 +121,15 @@
   .pd-tech-specs .v { color: var(--ink); font-weight: 500; text-align: right; }
 
   /* ===== 4-col bottom ===== */
-  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; align-items: start; }
+  .pd-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 16px; }
   @media (max-width: 1100px) { .pd-cols { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 600px) { .pd-cols { grid-template-columns: 1fr; } }
-  .pd-col { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; }
+  .pd-col { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); padding: 22px 24px; display: flex; flex-direction: column; }
   .pd-col h3 {
     font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.16em;
     text-transform: uppercase; color: var(--ink); margin: 0 0 18px; font-weight: 600;
   }
-  .pd-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; }
+  .pd-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 14px; flex: 1; justify-content: space-between; }
   .pd-col li { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; color: var(--ink-2); line-height: 1.45; }
   .pd-col-ico {
     flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; background: var(--bg-2);
@@ -139,11 +139,11 @@
 
   .pd-pack-img { width: 100%; aspect-ratio: 3/2; background: var(--bg-2); border-radius: var(--r-md); margin-bottom: 14px; overflow: hidden; }
   .pd-pack-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .pd-pack-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
+  .pd-pack-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; margin-top: auto; }
   .pd-pack-list li { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--ink-2); }
   .pd-pack-list li::before { content: "›"; color: var(--muted); flex-shrink: 0; }
 
-  .pd-loadtable { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .pd-loadtable { width: 100%; border-collapse: collapse; font-size: 13px; flex: 1; }
   .pd-loadtable th, .pd-loadtable td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; }
   .pd-loadtable thead th { font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
     text-transform: uppercase; color: var(--muted); font-weight: 500; }
