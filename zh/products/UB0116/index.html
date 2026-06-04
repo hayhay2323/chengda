@@ -116,7 +116,8 @@
   @media (max-width: 880px) { .pd-tech-grid { grid-template-columns: 1fr; } }
   .pd-tech-draws { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
   .pd-tech-draws.two { grid-template-columns: 1fr 1fr; }
-  .pd-tech-draws.two .pd-tech-draw { aspect-ratio: 3/2; padding: 18px; }
+  .pd-tech-draws.two .pd-tech-draw { aspect-ratio: auto; padding: 14px; align-self: start; }
+  .pd-tech-draws.two .pd-tech-draw img { width: 100%; height: auto; max-height: none; }
   .pd-tech-draw { background: #fff; border-radius: var(--r-md); padding: 16px; aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; }
   .pd-tech-draw img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
 
@@ -260,7 +261,7 @@
 
         <div class="pd-specs">
           <div class="k">系列</div><div class="v">內斜矩形下嵌盆</div>
-          <div class="k">尺寸</div><div class="v">415 × 285 × 160 mm<span class="small">16.3″ × 11.2″ × 6.3″ · 內徑 370 × 220 × 115 mm</span></div>
+          <div class="k">尺寸</div><div class="v">415 × 285 × 160 mm<span class="small">16.3″ × 11.2″ × 6.3″</span></div>
           <div class="k">淨重</div><div class="v">5 公斤</div>
           <div class="k">成型工藝</div><div class="v">高壓注漿成型</div>
           <div class="k">材質</div><div class="v">高溫燒製陶瓷<span class="small">玻化瓷 · 1,250 °C 燒製</span></div>
