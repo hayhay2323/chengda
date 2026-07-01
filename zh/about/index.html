@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <title>關於 · 程達</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta name="description" content="程達 — 潮州 25 年陶瓷衛浴 OEM/ODM 工廠。200+ 型號、CUPC + ISO 9001、出口 50+ 國家。1999 年成立。" />
+<meta name="description" content="程達是位於中國潮州的 50,000 m² 陶瓷衛浴工廠 —— 6 條高壓注漿線、2 座燃氣隧道窯，年產 70 萬件，於 1,250°C 玻化。CUPC + ISO 9001，出口 50+ 國家。" />
 <meta property="og:type" content="website" />
-<meta property="og:title" content="關於程達 — 潮州 25 年陶瓷工藝" />
-<meta property="og:description" content="1999 年成立。200+ 型號。CUPC + ISO 9001。出口 50+ 國家。" />
+<meta property="og:title" content="關於程達 —— 潮州 50,000 m² 陶瓷工廠，創立於 1999" />
+<meta property="og:description" content="6 條高壓注漿線。2 座燃氣窯。年產 70 萬件。CUPC + ISO 9001。出口 50+ 國家。" />
 <meta property="og:image" content="https://www.gdchengda.hk/assets/og-home.webp" />
 <meta property="og:url" content="https://www.gdchengda.hk/zh/about/" />
 <meta name="twitter:card" content="summary_large_image" />
@@ -31,56 +31,390 @@
 <link rel="stylesheet" href="/assets/porcelain.css?v=18" />
 <style>
   body { font-family: 'Inter', 'Noto Sans TC', -apple-system, system-ui, sans-serif; }
-  .lede { font-size: clamp(24px, 3vw, 36px); font-weight: 500; line-height: 1.4; letter-spacing: -0.02em; max-width: 32ch; }
-  .lede .soft { color: var(--muted); font-style: italic; font-weight: 400; }
-  .facts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line); max-width: 720px; }
-  @media (max-width: 720px) { .facts { grid-template-columns: 1fr; } }
-  .fact .k { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
-  .fact .v { font-size: 17px; font-weight: 500; color: var(--ink); line-height: 1.5; }
-  .fact .v small { display: block; color: var(--muted); font-weight: 400; font-size: 13px; margin-top: 4px; }
+  /* ---- Brand-story type ---- */
+  .lede { font-size: clamp(26px, 3.4vw, 44px); font-weight: 500; line-height: 1.24; letter-spacing: -0.02em; max-width: 26ch; }
+  .lede .soft { color: var(--muted); font-style: italic; font-weight: 400; font-family: 'Newsreader','Noto Sans TC',serif; letter-spacing: -0.01em; }
+  .kicker { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; }
+
+  /* ---- Hard-power stat wall (animated count-up) ---- */
+  .statwall { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+  @media (max-width: 880px) { .statwall { grid-template-columns: repeat(2, 1fr); } }
+  .statwall .s { background: var(--bg); padding: clamp(22px, 2.8vw, 40px) clamp(16px, 1.8vw, 28px); }
+  .statwall .n { font-size: clamp(32px, 4.4vw, 58px); font-weight: 600; letter-spacing: -0.045em; line-height: 1; font-variant-numeric: tabular-nums; color: var(--ink); }
+  .statwall .n sup { font-size: 0.46em; font-weight: 500; vertical-align: super; color: var(--muted); margin-left: 1px; letter-spacing: 0; }
+  .statwall .n .u { font-size: 0.42em; font-weight: 500; color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+  .statwall .l { margin-top: 12px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); line-height: 1.45; }
+
+  /* ---- Cinematic full-bleed band ---- */
+  .band { position: relative; width: 100%; margin: 0; overflow: hidden; }
+  .band img { width: 100%; height: clamp(360px, 66vh, 720px); object-fit: cover; display: block; filter: brightness(0.93) contrast(1.04) saturate(1.03); }
+  .band .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,12,15,0) 22%, rgba(10,12,15,0.32) 55%, rgba(10,12,15,0.7) 80%, rgba(10,12,15,0.92) 100%); pointer-events: none; }
+  .band .bcap { position: absolute; left: var(--pad); right: var(--pad); bottom: clamp(24px, 5vh, 48px); color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.65); }
+  .band .bcap .t { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.9; }
+  .band .bcap .h { font-size: clamp(22px, 3vw, 38px); font-weight: 500; letter-spacing: -0.02em; margin-top: 10px; max-width: 24ch; line-height: 1.2; }
+
+  /* ---- Story prose ---- */
+  .prose { max-width: 52ch; }
+  .prose p { font-size: clamp(16px, 1.5vw, 19px); line-height: 1.8; color: var(--ink-2); margin-bottom: 16px; }
+  .prose p .soft { color: var(--muted); font-style: italic; font-family: 'Newsreader','Noto Sans TC',serif; }
+
+  /* ---- Split: text + image ---- */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+  @media (max-width: 880px) { .split { grid-template-columns: 1fr; gap: 32px; } }
+  .split figure { margin: 0; border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--line); }
+  .split figure img { width: 100%; height: clamp(300px, 48vh, 540px); object-fit: cover; display: block; }
+  .split figure.videofig { border: none; overflow: visible; background: none; display: flex; justify-content: center; }
+  .split figure.videofig video { width: auto; height: clamp(380px, 66vh, 620px); max-width: 100%; display: block; border-radius: var(--r-lg); border: 1px solid var(--line); object-fit: cover; background: #000; box-shadow: 0 30px 60px -30px rgba(0,0,0,0.35); }
+  .split .reverse { order: -1; }
+  .certpts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; margin-top: 12px; }
+  .certpts > div { background: var(--bg); padding: 24px 22px; }
+  .certpts h4 { margin: 0 0 7px; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+  .certpts p { margin: 0; font-size: 13px; line-height: 1.65; color: var(--muted); }
+  @media (max-width: 880px) { .certpts { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .certpts { grid-template-columns: 1fr; } }
+
+  /* ---- Capability cards (the hard-power tech) ---- */
+  .cap3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 880px) { .cap3 { grid-template-columns: 1fr; } }
+  .cap3 .c { border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; background: var(--bg); display: flex; flex-direction: column; }
+  .cap3 .c img { width: 100%; height: 210px; object-fit: cover; display: block; }
+  .cap3 .c .b { padding: 24px 24px 28px; }
+  .cap3 .c .big { font-size: clamp(30px, 3.4vw, 42px); font-weight: 600; letter-spacing: -0.035em; line-height: 1; }
+  .cap3 .c .big .u { font-size: 0.42em; font-weight: 500; color: var(--muted); margin-left: 6px; letter-spacing: 0.02em; }
+  .cap3 .c h4 { font-size: 19px; font-weight: 600; margin: 12px 0 10px; letter-spacing: -0.02em; }
+  .cap3 .c p { font-size: 14.5px; line-height: 1.75; color: var(--ink-2); }
+
+  /* ---- Process grid (clay → finished) ---- */
+  .cap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 880px) { .cap-grid { grid-template-columns: 1fr; } }
+  .cap { background: var(--bg-2); border-radius: var(--r-lg); padding: 28px; }
+  .cap .num { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); text-transform: uppercase; margin-bottom: 14px; }
+  .cap h4 { font-size: 18px; font-weight: 600; margin-bottom: 10px; letter-spacing: -0.01em; }
+  .cap p { font-size: 14px; line-height: 1.75; color: var(--ink-2); }
+
+  /* ---- Pull quote ---- */
+  .pull { font-family: 'Newsreader','Noto Sans TC',serif; font-style: italic; font-weight: 400; font-size: clamp(26px, 3.4vw, 44px); line-height: 1.3; letter-spacing: -0.01em; color: var(--ink); max-width: 26ch; }
+  .pull .by { display: block; margin-top: 24px; font-family: var(--font-mono); font-style: normal; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+
+  /* ---- CTA band ---- */
+  .cta { background: var(--ink); color: #fff; border-radius: var(--r-xl); padding: clamp(40px, 7vw, 88px); text-align: center; }
+  .cta h2 { font-size: clamp(30px, 4vw, 56px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.15; }
+  .cta h2 .soft { color: #9aa1ab; font-style: italic; font-weight: 400; font-family: 'Newsreader','Noto Sans TC',serif; }
+  .cta p { margin: 18px auto 0; max-width: 46ch; color: #b7bcc4; font-size: 16px; line-height: 1.7; }
+  .cta .actions { display: flex; gap: 12px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+  .cta .btn { border-color: rgba(255,255,255,0.25); color: #fff; }
+  .cta .btn:hover { background: rgba(255,255,255,0.08); border-color: #fff; }
+  .cta .btn.primary { background: #fff; color: var(--ink); border-color: #fff; }
+  .cta .btn.primary:hover { background: #f4f5f7; }
 </style>
 </head>
 <body>
 
 <div id="shell-nav"></div>
 
+<!-- ===== HERO (text) ===== -->
 <section class="subpage-hero">
   <div class="wrap">
     <div class="crumbs"><a href="/zh/">首頁</a><span class="sep">/</span><span>關於</span></div>
-    <h1>潮州燒製,<br/><span class="soft">自 1999。</span></h1>
-    <div class="sub">
-      <span>25 年經驗</span><span>200+ 型號</span><span>50+ 國家</span>
-    </div>
+    <h1>為量產而生，<span class="soft">為耐久而製。</span></h1>
+    <div class="sub"><span>創立於 1999</span><span>潮州 · 廣東</span><span>50,000 m² 廠房</span><span>50+ 國家</span></div>
   </div>
 </section>
 
-<section class="section">
+<!-- ===== LEDE ===== -->
+<section class="section" style="padding-bottom: clamp(28px,4vh,52px)">
   <div class="wrap">
-    <p class="lede">廣東程達智能科技有限公司。<span class="soft">玻化瓷衛浴的 OEM/ODM 製造商,以單一工廠的紀律服務 50 多個國家的合作夥伴。</span></p>
-
-    <div class="facts">
-      <div class="fact"><div class="k">公司</div><div class="v">廣東程達智能科技有限公司<small>潮州 · 廣東 · 中國</small></div></div>
-      <div class="fact"><div class="k">成立</div><div class="v">1999<small>25 年陶瓷專業</small></div></div>
-      <div class="fact"><div class="k">認證</div><div class="v">CUPC · ISO 9001<small>北美 · 國際標準</small></div></div>
-      <div class="fact"><div class="k">產能</div><div class="v">200+ 型號 · 50+ 國家<small>OEM / ODM 全程客製</small></div></div>
-      <div class="fact"><div class="k">品牌</div><div class="v">CHENGDA · HUANA · 世家花</div></div>
-      <div class="fact"><div class="k">產品線</div><div class="v">面盆 · 柱盆 · 馬桶 · 智能馬桶<small>全玻化瓷,1,250°C 燒製</small></div></div>
-    </div>
-
-    <div style="margin-top:64px"><a href="/zh/contact/" class="btn primary"><span>洽詢合作</span><span class="arr"></span></a></div>
+    <p class="lede">自 1999 年起，我們只做一件事 —— 在<span class="soft">中國陶瓷之都</span>，規模化製造陶瓷衛浴。</p>
   </div>
 </section>
 
+<!-- ===== HARD-POWER STAT WALL (animated count-up) ===== -->
+<section class="wrap" style="padding-top:0; padding-bottom: clamp(20px,3vh,40px)">
+  <div class="statwall">
+    <div class="s"><div class="n"><span class="count" data-count="700000" data-group="1">0</span></div><div class="l">年產量 · 件</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="2000" data-group="1">0</span></div><div class="l">每日出成品</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="50000" data-group="1">0</span><span class="u">m²</span></div><div class="l">生產廠房面積</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="50">0</span><sup>+</sup></div><div class="l">出口國家</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="6">0</span></div><div class="l">高壓注漿線</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="2">0</span></div><div class="l">燃氣隧道窯</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="200">0</span><sup>+</sup></div><div class="l">產品型號</div></div>
+    <div class="s"><div class="n"><span class="count" data-count="50">0</span><sup>+</sup></div><div class="l">外觀設計專利</div></div>
+  </div>
+</section>
+
+<!-- ===== CINEMATIC BAND — the plant at scale ===== -->
+<section class="band">
+  <img src="/assets/gallery/factory-exterior.webp" alt="程達潮州陶瓷衛浴工廠 —— 50,000 m² 生產基地" loading="lazy" decoding="async" width="1600" height="900" />
+  <div class="scrim"></div>
+  <div class="bcap">
+    <div class="t">潮州 · 廣東</div>
+    <div class="h">一座工廠。50,000 m² 同一屋簷下。</div>
+  </div>
+</section>
+
+<!-- ===== MANUFACTURING POWER — the hard-power tech ===== -->
 <section class="section">
   <div class="wrap">
     <div class="section-head">
-      <div class="eyebrow">研發 · 創新</div>
-      <h2 style="margin-top:8px">自主<span class="soft">研發設計。</span></h2>
-      <p>50+ 項外觀設計專利 — 自有研發團隊,把創意變成可量產、受保護的產品。</p>
+      <div class="eyebrow">製造實力</div>
+      <h2 style="margin-top:8px">真正的生產線，<span class="soft">不是小作坊。</span></h2>
+      <p>高壓注漿、燃氣窯爐與自動化輸送 —— 為每天穩定產出 2,000 件成品而設計，品質可重複、可複製。</p>
+    </div>
+    <div class="cap3">
+      <div class="c">
+        <img src="/assets/gallery/slip-casting.webp" alt="程達高壓注漿 —— 液態泥漿在壓力模具中成型" loading="lazy" decoding="async" width="1000" height="667" />
+        <div class="b">
+          <div class="big">6<span class="u">條線</span></div>
+          <h4>高壓注漿</h4>
+          <p>六條高壓注漿線在壓力下成型每一件坯體 —— 瓷質更緻密、公差更小，一致性遠勝手工灌漿。</p>
+        </div>
+      </div>
+      <div class="c">
+        <img src="/assets/factory/kiln-firing.webp" alt="程達燃氣隧道窯於 1,250°C 燒製陶瓷面盆" loading="lazy" decoding="async" width="1000" height="667" />
+        <div class="b">
+          <div class="big">2<span class="u">座窯</span></div>
+          <h4>燃氣隧道窯</h4>
+          <p>兩座大型燃氣隧道窯全天候於 1,250&nbsp;°C 玻化 —— 將坯泥與釉料燒成緻密無孔的一體。</p>
+        </div>
+      </div>
+      <div class="c">
+        <img src="/assets/gallery/drying-racks.webp" alt="程達自動化生產線在各工序之間輸送陶瓷坯體" loading="lazy" decoding="async" width="1000" height="667" />
+        <div class="b">
+          <div class="big">2,000<span class="u">/ 天</span></div>
+          <h4>自動化生產線</h4>
+          <p>自動化輸送將坯體從注漿送往乾燥、施釉與燒成 —— 維持高產量，並讓每一批都達到同一標準。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HIGH-PRESSURE MOULD — feature split ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="kicker">高壓成型</div>
+        <h2 class="section-head" style="margin:0 0 22px"><span style="font-size:clamp(30px,4vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;display:block">在壓力下<span class="soft" style="color:var(--muted);font-style:italic;font-family:'Newsreader','Noto Sans TC',serif">成型。</span></span></h2>
+        <div class="prose">
+          <p>每一件產品的坯體都在高壓模具中成型 —— 泥漿在壓力下注入模腔，數分鐘即可脫模，而非數小時。</p>
+          <p>成品是更緻密、更堅固的瓷體，擁有<span class="soft">更銳利的邊角、更小的公差，以及批次之間的一致性</span> —— 這是重力模具無法達到的。</p>
+        </div>
+        <div style="margin-top:8px">
+          <div class="data-row"><div class="k">注漿</div><div class="v">高壓樹脂模具 · 6 條線</div></div>
+          <div class="data-row"><div class="k">週期</div><div class="v">每件坯體數分鐘，自動脫模</div></div>
+          <div class="data-row"><div class="k">優勢</div><div class="v">坯體更緻密，尺寸更一致</div></div>
+        </div>
+      </div>
+      <figure class="videofig">
+        <video src="/assets/factory/hp-casting.mp4" poster="/assets/factory/hp-casting-poster.webp" autoplay muted loop playsinline preload="metadata" width="720" height="1280" aria-label="程達高壓注漿線 —— 工人為剛成型的陶瓷坯體脫模"></video>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IN-HOUSE MOULD SHOP ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="split">
+      <figure class="videofig">
+        <video src="/assets/factory/mould-shop.mp4" poster="/assets/factory/mould-shop-poster.webp" autoplay muted loop playsinline preload="metadata" width="720" height="1280" aria-label="程達自有模具車間 —— 陶瓷面盆與馬桶的石膏及樹脂模具"></video>
+      </figure>
+      <div>
+        <div class="kicker">自有模具車間</div>
+        <h2 class="section-head" style="margin:0 0 22px"><span style="font-size:clamp(30px,4vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;display:block">我們自己的<span class="soft" style="color:var(--muted);font-style:italic;font-family:'Newsreader','Noto Sans TC',serif">模具車間。</span></span></h2>
+        <div class="prose">
+          <p>在任何一件產品成型之前，它的模具已在我們自己的模具車間製成 —— 石膏與樹脂模具全部自製，從不外包。</p>
+          <p>多年的製模經驗，讓我們能把您的圖紙或樣品變成可量產的高壓模具 —— 我們已為<span class="soft">超過 1,000 家客戶</span>做到這一點。</p>
+        </div>
+        <div style="margin:16px 0 20px">
+          <div style="font-size:clamp(44px,6vw,76px);font-weight:600;letter-spacing:-0.04em;line-height:1;font-variant-numeric:tabular-nums;color:var(--ink)"><span class="count" data-count="1000" data-group="1">0</span><span style="font-size:0.5em;vertical-align:super">+</span></div>
+          <div style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.04em;text-transform:uppercase;color:var(--muted);margin-top:8px">已開模客戶</div>
+        </div>
+        <div style="margin-top:8px">
+          <div class="data-row"><div class="k">製模</div><div class="v">自有石膏與樹脂模具</div></div>
+          <div class="data-row"><div class="k">服務</div><div class="v">OEM · ODM · 專屬開模</div></div>
+          <div class="data-row"><div class="k">交付</div><div class="v">從圖紙或樣品到量產模具</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAPACITY BAND — output / shipping ===== -->
+<section class="band">
+  <img src="/assets/gallery/container-port.webp" alt="程達陶瓷衛浴出口裝運 —— 港口貨櫃" loading="lazy" decoding="async" width="1600" height="900" />
+  <div class="scrim"></div>
+  <div class="bcap">
+    <div class="t">每月 20+ 個貨櫃</div>
+    <div class="h">年產 700,000 件，發往 50+ 個國家。</div>
+  </div>
+</section>
+
+<!-- ===== PROCESS — clay to finished piece ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">製程</div>
+      <h2 style="margin-top:8px">從坯泥到<span class="soft">成品。</span></h2>
+      <p>每一件都經過相同的九道工序 —— 高壓注漿、燃氣窯燒成、逐件人工檢驗。</p>
+    </div>
+    <div class="cap-grid">
+      <div class="cap"><div class="num">01 · 坯料</div><h4>陶土與泥漿</h4><p>礦物陶土經配比與研磨成液態泥漿 —— 每一件產品的起點。</p></div>
+      <div class="cap"><div class="num">02 · 注漿</div><h4>高壓注漿</h4><p>泥漿在壓力下注入模具 —— 坯體比重力灌漿更緻密、更一致。</p></div>
+      <div class="cap"><div class="num">03 · 乾燥</div><h4>控制乾燥</h4><p>坯體在自動化架上靜置乾燥，均勻釋放水分，不變形、不開裂。</p></div>
+      <div class="cap"><div class="num">04 · 修坯</div><h4>人工修整</h4><p>修去接縫、修順邊角，逐一對光檢查每一道弧線。</p></div>
+      <div class="cap"><div class="num">05 · 施釉</div><h4>施釉</h4><p>均勻上一層釉 —— 決定產品未來的表面、色澤與手感。</p></div>
+      <div class="cap"><div class="num">06 · 燒成</div><h4>燃氣窯燒成</h4><p>燃氣隧道窯於 1,250&nbsp;°C 將坯泥與釉料玻化為緻密無孔的一體。</p></div>
+      <div class="cap"><div class="num">07 · 檢驗</div><h4>品質檢驗</h4><p>逐件核對尺寸、釉面與表面公差，不合格者一律挑出。</p></div>
+      <div class="cap"><div class="num">08 · 包裝</div><h4>防護包裝</h4><p>泡棉、專配紙箱與您的標籤 —— 為最長的貨櫃航程而設計。</p></div>
+      <div class="cap"><div class="num">09 · 裝櫃</div><h4>貨櫃裝運</h4><p>最佳化裝櫃方案，FOB 到 DDP，貨代網絡覆蓋五大洲。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== KILN — gas-fired firing (video) ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="kicker">1,250 °C · 燃氣玻化</div>
+        <h2 class="section-head" style="margin:0 0 22px"><span style="font-size:clamp(30px,4vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;display:block">兩座窯爐，<span class="soft" style="color:var(--muted);font-style:italic;font-family:'Newsreader','Noto Sans TC',serif">全天候燒製。</span></span></h2>
+        <div class="prose">
+          <p>滿載的窯車通過兩座大型燃氣隧道窯，最高達 1,250 °C，將坯泥與釉料玻化為緻密無孔的一體。</p>
+          <p>窯火從不停歇 —— <span class="soft">晝夜不息，一批接一批</span> —— 維持高產量，每一件出窯都是同一標準。</p>
+        </div>
+        <div style="margin-top:8px">
+          <div class="data-row"><div class="k">窯爐</div><div class="v">2 座燃氣隧道窯</div></div>
+          <div class="data-row"><div class="k">溫度</div><div class="v">最高 1,250 °C 玻化</div></div>
+          <div class="data-row"><div class="k">排程</div><div class="v">連續運轉 · 全天候</div></div>
+        </div>
+      </div>
+      <figure class="videofig">
+        <video src="/assets/factory/kiln.mp4" poster="/assets/factory/kiln-poster.webp" autoplay muted loop playsinline preload="metadata" width="720" height="1280" aria-label="程達燃氣隧道窯 —— 滿載陶瓷的窯車停在窯口"></video>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATES / R&D — credibility wall ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <div class="kicker">認證 · 檢測 · 保護</div>
+        <h2 class="section-head" style="margin:0 0 22px"><span style="font-size:clamp(30px,4vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;display:block">有紙證，<span class="soft" style="color:var(--muted);font-style:italic;font-family:'Newsreader','Noto Sans TC',serif">為品質背書。</span></span></h2>
+        <div class="prose">
+          <p>CUPC 面向北美。ISO&nbsp;9001 面向背後的體系。50+ 項註冊外觀設計專利，覆蓋我們自有的產品平台。</p>
+          <p>認證不會創造品質 —— 它們<span class="soft">印證了早已落實在車間裡的紀律。</span></p>
+        </div>
+        <div style="margin-top:8px">
+          <div class="data-row"><div class="k">CUPC</div><div class="v">北美市場准入（IAPMO&nbsp;R&amp;T）</div></div>
+          <div class="data-row"><div class="k">ISO 9001</div><div class="v">品質管理體系認證</div></div>
+          <div class="data-row"><div class="k">專利</div><div class="v">50+ 項註冊外觀設計專利</div></div>
+          <div class="data-row"><div class="k">檢驗</div><div class="v">每道工序均檢查尺寸、釉面與表面</div></div>
+        </div>
+      </div>
+      <figure>
+        <img src="/assets/about/patents.webp" alt="程達外觀設計專利證書牆 —— 50+ 項註冊專利" loading="lazy" decoding="async" width="1000" height="750" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GLOBAL CERTIFICATIONS — logo band ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head" style="text-align:center;max-width:640px;margin-left:auto;margin-right:auto">
+      <div class="eyebrow">認證品質 · 全球信賴</div>
+      <h2 style="margin-top:8px">為每個市場<span class="soft">而認證。</span></h2>
+      <p><strong>11 項國際認證</strong> —— 面向全球的紙證齊備。</p>
+    </div>
+    <div class="certpts">
+      <div><h4>11 項認證</h4><p><strong>CE · cUPC · ISO&nbsp;9001 / 14001 · NSF · WRAS · SASO · WaterMark · BSCI · SGS</strong></p></div>
+      <div><h4>清關無憂</h4><p>完整的<strong>檢測報告與合規文件</strong>，通關順暢。</p></div>
+      <div><h4>在地合規</h4><p>產品<strong>依您市場的法規量身調整</strong>。</p></div>
+      <div><h4>服務保障</h4><p>每一批貨都有<strong>可靠的售後</strong>支援。</p></div>
+    </div>
+    <figure style="margin:12px 0 0;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:#fff">
+      <img src="/assets/factory/cert-logos.webp" alt="程達國際認證 —— CE、cUPC、ISO 9001、ISO 14001、節水認證、NSF/ANSI 61、WRAS、SASO、WaterMark、BSCI、SGS" loading="lazy" decoding="async" width="1463" height="160" style="width:100%;display:block" />
+    </figure>
+  </div>
+</section>
+
+<!-- ===== FINISHES — showroom ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">產品系列</div>
+      <h2 style="margin-top:8px">200+ 型號，<span class="soft">同一標準。</span></h2>
+      <p>白瓷、啞光、大理石紋與手工描金 —— 涵蓋面盆、馬桶與智能衛浴。每一種釉料都在我們潮州自有廠房內調配與燒製。</p>
     </div>
     <figure style="margin:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line)">
-      <img src="/assets/about/patents.webp" alt="程達外觀設計專利證書牆 — 50+ 項專利" loading="lazy" decoding="async" width="1600" height="900" style="width:100%;display:block" />
+      <img src="/assets/factory/factory-4.webp" alt="程達藝術盆展廳 —— 彩色、大理石紋與描金陶瓷面盆" loading="lazy" decoding="async" width="1600" height="900" style="width:100%;display:block" />
     </figure>
+  </div>
+</section>
+
+<!-- ===== QC SPLIT — habit not checkpoint ===== -->
+<section class="section" style="background:var(--bg-2)">
+  <div class="wrap">
+    <div class="split">
+      <figure>
+        <img src="/assets/factory/qc-inspection.webp" alt="程達檢驗員對光檢查一件成品白瓷面盆" loading="lazy" decoding="async" width="1280" height="853" />
+      </figure>
+      <div>
+        <div class="kicker">品質控制</div>
+        <h2 class="section-head" style="margin:0 0 22px"><span style="font-size:clamp(30px,4vw,52px);font-weight:500;letter-spacing:-0.03em;line-height:1.15;display:block">是習慣，<span class="soft" style="color:var(--muted);font-style:italic;font-family:'Newsreader','Noto Sans TC',serif">不是關卡。</span></span></h2>
+        <div class="prose">
+          <p>每一件在包裝前都會檢查尺寸、釉面與表面 —— 任何超出公差的都會被拉下線。</p>
+          <p>真正的產品是<span class="soft">可重複性</span> —— 一櫃接一櫃，尺寸、釉面與表面始終如一。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">歷程</div>
+      <h2 style="margin-top:8px">從一間作坊<span class="soft">到一座工廠。</span></h2>
+    </div>
+    <div>
+      <div class="data-row"><div class="k">1999 · 創立</div><div class="v">潮州一間小作坊燒出第一批柱盆。</div></div>
+      <div class="data-row"><div class="k">2005 · 出口</div><div class="v">首張海外訂單 —— 程達進入東南亞市場。</div></div>
+      <div class="data-row"><div class="k">2010 · ISO 9001</div><div class="v">品質管理體系通過認證。</div></div>
+      <div class="data-row"><div class="k">2015 · CUPC</div><div class="v">產品獲北美市場准入。</div></div>
+      <div class="data-row"><div class="k">2020 · 規模化</div><div class="v">六條高壓注漿線與兩座燃氣窯投入生產。</div></div>
+      <div class="data-row"><div class="k">2024 · 智能</div><div class="v">智能馬桶平台推出 —— 加熱座圈、自動沖水。</div></div>
+      <div class="data-row"><div class="k">2026 · 今天</div><div class="v">年產 700,000 件，發往 50+ 個國家。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CINEMATIC BAND — warehouse / export ===== -->
+<section class="band">
+  <img src="/assets/factory/warehouse.webp" alt="程達出口倉庫 —— 上板待裝櫃的陶瓷衛浴" loading="lazy" decoding="async" width="1600" height="900" />
+  <div class="scrim"></div>
+  <div class="bcap">
+    <div class="t">打包 · 上板 · 待運</div>
+    <div class="h">為完好抵達世界任何角落而打造。</div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <h2>為耐久而設計，<span class="soft">為信賴而製造。</span></h2>
+      <p>OEM、ODM 或貼牌 —— 從一件樣品到一整櫃，我們的團隊隨時待命。</p>
+      <div class="actions">
+        <a href="/zh/oem/" class="btn primary"><span>開始一個項目</span> <span class="arr"></span></a>
+        <a href="/zh/contact/" class="btn">聯絡我們</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -88,6 +422,45 @@
 
 <script src="/assets/site-shell.js?v=9" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>renderShell('about'));</script>
+
+<!-- ===== Count-up animation for the stat wall ===== -->
+<script>
+(function(){
+  function run(el){
+    var to = parseFloat(el.getAttribute('data-count'));
+    var grp = el.getAttribute('data-group') === '1';
+    var dur = 1500, start = null;
+    function ease(t){ return 1 - Math.pow(1 - t, 3); }
+    function fmt(n){ return grp ? Math.round(n).toLocaleString('en-US') : String(Math.round(n)); }
+    function step(ts){
+      if(start === null) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      el.textContent = fmt(to * ease(p));
+      if(p < 1){ requestAnimationFrame(step); } else { el.textContent = fmt(to); }
+    }
+    requestAnimationFrame(step);
+  }
+  function init(){
+    var els = [].slice.call(document.querySelectorAll('.count'));
+    if(!els.length) return;
+    var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(reduced || !('IntersectionObserver' in window)){
+      els.forEach(function(el){
+        var grp = el.getAttribute('data-group') === '1';
+        var to = parseFloat(el.getAttribute('data-count'));
+        el.textContent = grp ? to.toLocaleString('en-US') : String(to);
+      });
+      return;
+    }
+    var io = new IntersectionObserver(function(ents){
+      ents.forEach(function(e){ if(e.isIntersecting){ run(e.target); io.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    els.forEach(function(el){ io.observe(el); });
+  }
+  if(document.readyState !== 'loading') init();
+  else document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
 
 <script type="application/ld+json">
 {
